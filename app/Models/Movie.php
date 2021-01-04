@@ -21,4 +21,13 @@ class Movie extends Model
     public function actors(){
         return $this->belongsToMany(Actor::class,'actors','movie_id','actor_id');
     }
+    protected $fillable = [
+      'name',
+      'year',
+      'time',
+        'image',
+        'video',
+        'director_id',
+        'country_id',
+    ];
 }
