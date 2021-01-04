@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\MovieController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('font-end.movie-detail');
+    return view('font-end.master');
 });
-Route::get('/',[MovieController::class,'index'])->name('movie.index');
-Route::get('/movie/{id}/show',[MovieController::class,'show'])->name('movie.detail');
+
+Route::group(['prefix' => 'movie'], function () {
+    Route::get('/',[\App\Http\Controllers\MovieController::class ,'index'])->name('movies.list');
+
+    Route::get('/create',[\App\Http\Controllers\MovieController::class ,'create'])->name('movies.create');
+    Route::post('/create',[\App\Http\Controllers\MovieController::class,'store'])->name('movies.store');
+    Route::get('/{id}/edit',[\App\Http\Controllers\MovieController::class ,'edit'])->name('movies.edit');
+    Route::post('/{id}/edit',[\App\Http\Controllers\MovieController::class,'update'])->name('movies.update');
+    Route::get('/{id}/delete',[\App\Http\Controllers\MovieController::class ,'destroy'])->name('movies.destroy');
+
+//    Route::post('/search',[\App\Http\Controllers\MovieController::class,'search'])->name('customers.search');
+
+
+//    Route::get('/filter',[\App\Http\Controllers\MovieController::class ,'filterByCity'])->name('customers.filterByCity');
+});
