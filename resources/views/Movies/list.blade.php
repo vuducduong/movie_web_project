@@ -24,27 +24,7 @@
                 Tìm Kiếm
             </a>
             <a style="position: absolute;left: 90%" class="btn btn-primary" href="{{ route('movies.create') }}">Thêm mới</a>
-{{--            <div class="col-12">--}}
-{{--                @if (Session::has('success'))--}}
-{{--                    <p class="text-success">--}}
-{{--                        <i class="fa fa-check" aria-hidden="true"></i>--}}
-{{--                        {{ Session::get('success') }}--}}
-{{--                    </p>--}}
-{{--                @endif--}}
 
-{{--                @if(isset($totalCustomerFilter))--}}
-{{--                    <span class="text-muted">--}}
-{{--                    {{'Tìm thấy' . ' ' . $totalCustomerFilter . ' '. 'khách hàng:'}}--}}
-{{--                </span>--}}
-{{--                @endif--}}
-
-{{--                @if(isset($cityFilter))--}}
-{{--                    <div class="pl-5">--}}
-{{--                   <span class="text-muted"><i class="fa fa-check" aria-hidden="true"></i>--}}
-{{--                       {{ 'Thuộc tỉnh' . ' ' . $cityFilter->name }}</span>--}}
-{{--                    </div>--}}
-{{--                @endif--}}
-{{--            </div>--}}
             <table class="table table-striped">
                 <thead>
                 <tr>
@@ -77,8 +57,8 @@
                             <td>{{ $movie->director->name }}</td>
                             <td>{{ $movie->image }}</td>
                             <td>{{ $movie->video }}</td>
-                            <td><a class="btn btn-warning" href="{{ route('movies.edit', $customer->id) }}">sửa</a></td>
-                            <td><a class="btn btn-danger"  href="{{ route('movies.destroy', $customer->id) }}" class="text-danger" onclick="return confirm('Bạn chắc chắn muốn xóa?')">xóa</a></td>
+                            <td><a class="btn btn-warning" href="{{ route('movies.edit', $movie->id) }}">sửa</a></td>
+                            <td><a class="btn btn-danger"  href="{{ route('movies.destroy', $movie->id) }}" class="text-danger" onclick="return confirm('Bạn chắc chắn muốn xóa?')">xóa</a></td>
                         </tr>
                     @endforeach
                 @endif
@@ -87,7 +67,7 @@
 
 
             <div style="font-size:20px;text-align: right!important; ">
-                {{$customers->links()}}
+                {{$movie->links()}}
             </div>
 
         </div>

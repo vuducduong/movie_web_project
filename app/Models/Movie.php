@@ -61,4 +61,5 @@ class Movie extends Model
     {
         return $this->belongsTo('App\Models\Conntry');
     }
+
 }
