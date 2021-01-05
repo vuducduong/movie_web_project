@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26d11aa2-f9c5-4f8a-8607-c1c83d004c03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/font-end/images/new-movies/blackwidow.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/font-end/videos/bw.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/font-end/home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/font-end/movie-detail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Movie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-end/images/favorite/01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/font-end/images/new-movies/01.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-end/images/favorite/02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/font-end/images/new-movies/02.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-end/images/favorite/03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/font-end/images/new-movies/03.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-end/images/favorite/04.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/font-end/images/new-movies/04.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-end/images/favorite/05.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/font-end/images/new-movies/05.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/font-end/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/font-end/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/font-end/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/font-end/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/theme_movie_html/frontend/html/images/favorite/wd.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/font-end/images/new-movies/wd.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/theme_movie_html/frontend/html/movie-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/theme_movie_html/frontend/html/movie-details.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,6 +129,9 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
     </include_path>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1mHD6zaxLMFac62naWRfUWIP088" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -151,9 +143,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CSTDMD3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -193,6 +185,11 @@
       <workItem from="1609489141242" duration="6923000" />
       <workItem from="1609730063886" duration="4220000" />
       <workItem from="1609742546478" duration="65000" />
+      <workItem from="1609743551068" duration="540000" />
+      <workItem from="1609751720339" duration="875000" />
+      <workItem from="1609752797899" duration="2947000" />
+      <workItem from="1609800148541" duration="235000" />
+      <workItem from="1609814039214" duration="2348000" />
     </task>
     <servers />
   </component>

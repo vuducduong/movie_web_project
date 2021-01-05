@@ -164,7 +164,7 @@
                                                 </div>
                                                 <div class="hover-buttons">
                                           <span class="btn btn-hover">
-                                          <i class="fa fa-play mr-1" aria-hidden="true"><a href="{{route('movie.detail',$movie->id)}}">Xem Phim</a></i>
+                                          <i class="fa fa-play mr-1" aria-hidden="true"><a href="{{route('movie-fontEnd.detail',$movie->id)}}">Xem Phim</a></i>
 
                                           </span>
                                                 </div>
