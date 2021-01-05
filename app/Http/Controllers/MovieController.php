@@ -1,31 +1,34 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Country;
+use App\Models\Director;
 use App\Models\Movie;
 use Illuminate\Http\Request;
 
 class MovieController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        $movie =Movie::paginate(10);
-        return view('Movies.list', compact('movie', 'movie'));
+
+
+
+        $movies = Movie::all();
+//      dd($movies);
+       $movie =Movie::paginate(10);
+        return view('Movies.list', compact('movies'));
+
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
-        $movie = Movie::all();
-        return view('Movies.create', compact('movie'));
+        $countries = Country::all();
+        $directors = Director::all();
+
+
+        return view('Movies.create', compact('countries','directors'));
     }
 
     /**

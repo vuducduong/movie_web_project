@@ -19,7 +19,7 @@
 //        'country_id',
 //    ];
 //    public function Contry(){
-//        return $this->belongsTo('App\Models\Conntry');
+//        return $this->belongsTo('App\Models\Country');
 //=======
 //
 //    public function directors(){
@@ -57,9 +57,14 @@ class Movie extends Model
         'country_id',
     ];
 
-    public function Contry()
+    public function country()
     {
-        return $this->belongsTo('App\Models\Conntry');
+        return $this->belongsTo('App\Models\Country');
+    }
+
+    public function director()
+    {
+        return $this->belongsTo('App\Models\Director    ');
     }
 
 }
