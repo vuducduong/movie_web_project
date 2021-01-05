@@ -1,6 +1,6 @@
-{{--@extends('home')--}}
-@section('title', 'Thêm Mới phim')
-@section('content')
+@extends('layouts.layout')
+{{--@section('title', 'Thêm Mới phim')--}}
+@section('movie')
     <div class="col-12 col-md-12">
         <div class="row">
             <div class="col-12">
@@ -11,12 +11,12 @@
                     @csrf
                     <div class="form-group">
                         <label>Tên Phim</label>
-                        <input type="text" class="form-control" name="name"  placeholder="Enter name" required>
+                        <input type="text" class="form-control" name="name"  required>
                     </div>
 
                     <div class="form-group">
                         <label>Year</label>
-                        <input type="number" class="form-control" name="year" placeholder="Enter year" required>
+                        <input type="number" class="form-control" name="year"  required>
                     </div>
 
                     <div class="form-group">
@@ -53,6 +53,7 @@
                         <label>Ảnh </label>
                         <input type="file" class="form-control" name="image" required>
                     </div>
+
 
 
 
