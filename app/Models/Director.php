@@ -8,7 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Director extends Model
 {
     use HasFactory;
-    public function movies(){
-        return $this->hasMany(Movie::class,'director_id');
+    protected $fillable = [
+        'name',
+
+    ];
+    public function Movie(){
+        return $this->belongsTo('App\Models\Movie');
     }
 }
