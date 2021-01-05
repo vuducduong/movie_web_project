@@ -11,10 +11,14 @@ class MovieController extends Controller
 
     public function index()
     {
+
+
+
         $movies = Movie::all();
-//        dd($movies);
-//        $movie =Movie::paginate(10);
+//      dd($movies);
+       $movie =Movie::paginate(10);
         return view('Movies.list', compact('movies'));
+
     }
 
 
@@ -107,5 +111,13 @@ class MovieController extends Controller
 
         $movies->delete();
         return redirect()->route('movies.list');
+    }
+    public function indexFontEnd(){
+        $movies = Movie::all();
+        return view('font-end.home',compact('movies'));
+    }
+    public function showFontEnd($id){
+        $movie = Movie::findorfail($id);
+        return view('font-end.movie-detail',compact('movie'));
     }
 }
