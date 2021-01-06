@@ -4,7 +4,7 @@
     <div class="col-12 col-md-12">
         <div class="row">
             <div class="col-12">
-                <h1>Chỉnh Sửa THông Tin Thanh Pho</h1>
+                <h1>Chỉnh Sửa THông Tin Quốc Gia</h1>
             </div>
             <div class="col-12">
                 <form method="post" action="{{ route('country.update', $country->id) }}">
@@ -16,7 +16,7 @@
 
 
 
-                    <button type="submit" class="btn btn-primary">Thêm mới</button>
+                    <button type="submit" class="btn btn-primary">Chỉnh Sửa</button>
                     <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Hủy</button>
                 </form>
             </div>

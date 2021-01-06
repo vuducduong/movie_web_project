@@ -1,5 +1,4 @@
 @extends('layouts.layout')
-{{--@section('title', 'Chỉnh Sửa Phim')--}}
 @section('movie')
     <div class="col-12 col-md-12">
         <div class="row">
@@ -7,7 +6,7 @@
                 <h1>Chỉnh Sửa THông Tin Bộ phim</h1>
             </div>
             <div class="col-12">
-                <form method="post" action="{{ route('movies.update', $movie->id) }}">
+                <form method="post"  enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label>Tên Phim</label>
@@ -25,17 +24,15 @@
                     </div>
 
 
-
-
                     <div class="form-group">
                         <label>Quốc Gia</label>
                         <select class="form-control" name="country_id">
-                            @foreach($countries as $countrie)
+                            @foreach($country as $value)
                                 <option
-                                    @if($countrie->country_id == $countries->id)
+                                    @if($movie->country_id == $value->id)
                                     {{"selected"}}
                                     @endif
-                                    value="{{$countries->id}}">{{$countries->name}}</option>
+                                    value="{{$value->id}}">{{$value->name}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -45,35 +42,37 @@
                     <div class="form-group">
                         <label>Đạo Diễn</label>
                         <select class="form-control" name="director_id">
-                            @foreach($directors as $director)
+                            @foreach($director as $value)
                                 <option
-                                    @if($director->director_id == $director->id)
+                                    @if($movie->director_id == $value->id)
                                     {{"selected"}}
                                     @endif
-                                    value="{{$director->id}}">{{$director->name}}</option>
+                                    value="{{$value->id}}">{{$value->name}}</option>
                             @endforeach
                         </select>
                     </div>
 
+
+
+
+
                     <div class="form-group">
                         <label>Ảnh </label>
-                        <input type="file" class="form-control" name="image" required>
+                        <input type="file" class="form-control-file" name="image" >
                     </div>
 
 
 
                     <div class="form-group">
                         <label>Video</label>
-                        <input type="file" class="form-control" name="video" required>
+                        <input type="file" class="form-control-file" name="video" >
                     </div>
 
 
 
 
 
-
-
-                    <button type="submit" class="btn btn-primary">Thêm mới</button>
+                    <button type="submit" class="btn btn-primary">Chỉnh Sửa</button>
                     <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Hủy</button>
                 </form>
             </div>

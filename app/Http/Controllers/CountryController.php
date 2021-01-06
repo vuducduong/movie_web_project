@@ -27,12 +27,7 @@ class CountryController extends Controller
         return view('Countrys.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
         $country = new Country();
@@ -40,7 +35,7 @@ class CountryController extends Controller
         $country->save();
 
         //tao moi xong quay ve trang danh sach phim
-        return redirect()->route('Countrys.list');
+        return redirect()->route('country.list');
     }
 
     /**
@@ -78,15 +73,14 @@ class CountryController extends Controller
         $country = Country::find($id);
         $country->fill($request->all());
         $country->save();
-        return redirect()->route('Countrys.list');
+        return redirect()->route('country.list');
     }
 
 
     public function destroy($id)
     {
         $country= Country::find($id);
-        $country->customers()->delete();
         $country->delete();
-        return redirect()->route('Countrys.list');
+        return redirect()->route('country.list');
     }
 }

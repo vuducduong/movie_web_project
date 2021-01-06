@@ -1,7 +1,6 @@
 
 
 @extends('layouts.layout')
-{{--@section('title', 'danh sah phim')--}}
 
 @section('movie')
     <div class="col-12">
@@ -22,6 +21,7 @@
                     <th scope="col">Đaọ Diễn</th>
                     <th scope="col">Ảnh phim</th>
                     <th scope="col">Video</th>
+                    <th scope="col">Thao Tác</th>
 
                     <th></th>
                     <th></th>
@@ -41,8 +41,17 @@
                             <td>{{ $movie->time }}</td>
                             <td>{{ $movie->country->name }}</td>
                             <td>{{ $movie->director->name }}</td>
-                            <td>{{ $movie->image }}</td>
-                            <td>{{ $movie->video }}</td>
+
+
+                            <td><img src="{{ asset($movie->image) }}" height="100px" width="100px"></td>
+
+
+                            <td>
+                                <a href="{{ route('movies.list', $movie->id) }}">{{ $movie->video }}</a>
+                            </td>
+
+
+
                             <td><a class="btn btn-warning" href="{{ route('movies.edit', $movie->id) }}">sửa</a></td>
                             <td><a class="btn btn-danger"  href="{{ route('movies.destroy', $movie->id) }}" class="text-danger" onclick="return confirm('Bạn chắc chắn muốn xóa?')">xóa</a></td>
                         </tr>
@@ -50,11 +59,6 @@
                 @endif
                 </tbody>
             </table>
-
-
-{{--            <div style="font-size:20px;text-align: right!important; ">--}}
-{{--                {{$movie->links()}}--}}
-{{--            </div>--}}
 
         </div>
 

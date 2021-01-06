@@ -21,9 +21,9 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', function () {
-    return view('layouts.layout');
-});
+Route::get('/admin', function () {
+    return view('layouts.master');
+})->name('master');
 
 Route::group(['prefix' => 'movie'], function () {
     Route::get('/', [MovieController::class, 'index'])->name('movies.list');
@@ -52,7 +52,7 @@ Route::group(['prefix' => 'countrys'], function () {
 });
 
 
-Route::group(['prefix' => 'derector'], function () {
+Route::group(['prefix' => 'director'], function () {
     Route::get('/',[DirectorController::class ,'index'])->name('directors.list');
 
     Route::get('/create',[DirectorController::class ,'create'])->name('directors.create');

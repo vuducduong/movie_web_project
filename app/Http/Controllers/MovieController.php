@@ -14,9 +14,9 @@ class MovieController extends Controller
 
 
 
-        $movies = Movie::all();
+        $movies = Movie::with(['country','director'])->get();
 //      dd($movies);
-       $movie =Movie::paginate(10);
+//       $movie =Movie::paginate(10);
         return view('Movies.list', compact('movies'));
 
     }
@@ -24,11 +24,11 @@ class MovieController extends Controller
 
     public function create()
     {
-        $countries = Country::all();
-        $directors = Director::all();
+        $country = Country::all();
+        $director = Director::all();
 
 
-        return view('Movies.create', compact('countries','directors'));
+        return view('Movies.create', compact('country','director'));
     }
 
     /**
@@ -44,8 +44,36 @@ class MovieController extends Controller
         $movie->name         = $request->input('name');
         $movie->year         = $request->input('year');
         $movie->time         = $request->input('time');
-        $movie->image        = $request->input('image');
-        $movie->video        = $request->input('video');
+
+
+
+
+
+        if (!$request->hasFile('image')) {
+            $movie->image = 'uploads/default.png';
+        } else {
+            $imageName = time() . '.' . $request->image->extension();
+            $request->image->move(public_path('uploads'), $imageName);
+            $movie->image = 'uploads/' . $imageName;
+        }
+
+
+
+
+
+
+//        $movie->video        = $request->input('video');
+
+
+        if ($request->hasFile('video')) {
+            $pathVideo = $request->file('video')->store('public/video');
+            $movie->video = $pathVideo;
+        }
+
+
+
+
+
         $movie->director_id  =$request->input('director_id');
         $movie->country_id   =$request->input('country_id');
         $movie->save();
@@ -72,9 +100,10 @@ class MovieController extends Controller
     public function edit($id)
     {
         $movie = Movie::findOrFail($id);
-        $movie = Movie::all();
+        $country = Country::all();
+        $director = Director::all();
 
-        return view('Movies.edit', compact('movie', 'movie'));
+        return view('Movies.edit', compact('movie','country','director' ));
     }
 
     /**
@@ -90,8 +119,38 @@ class MovieController extends Controller
         $movie->name          = $request->input('name');
         $movie->year          = $request->input('year');
         $movie->time          = $request->input('time');
-        $movie->image         = $request->input('image');
-        $movie->video         = $request->input('video');
+
+
+
+        if (!$request->hasFile('image')) {
+//            $movie->image = 'uploads/default.png';
+        } else {
+            $imageName = time() . '.' . $request->image->extension();
+            $request->image->move(public_path('uploads'), $imageName);
+            $movie->image = 'uploads/' . $imageName;
+        }
+
+
+
+//        $movie->video         = $request->input('video');
+
+
+
+//        if($request->hasFile('video')) {
+//            $currentAudio = $request->video;
+//            if($currentAudio) {
+//                Storage::delete('/pubic/' . $currentAudio);
+//            }
+//            $audio = $request->audio;
+//            $filename = $audio->getClientOriginalName();
+//            $audio->storeAs('public/video/' , $filename);
+//            $movie->video = $filename;
+//        }
+
+
+
+
+
         $movie->director_id   = $request->input('director_id');
         $movie->country_id    = $request->input('country_id');
         $movie->save();
