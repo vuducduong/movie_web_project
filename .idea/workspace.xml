@@ -2,142 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26d11aa2-f9c5-4f8a-8607-c1c83d004c03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/DirectorController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/css/ajax-loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/css/dark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/css/dataTables.bootstrap4.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/css/dripicons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/css/fontawesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/css/ionicons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/css/line-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/css/magnific-popup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/css/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/css/owl.video.play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/css/remixicon.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/css/responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/css/select2-bootstrap4.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/css/select2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/css/slick-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/css/slick.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/css/typography.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/css/variable.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/bg-03.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/cart/01.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/cart/02.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/cart/03.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/cart/04.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/dashboard/01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/dashboard/02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/dashboard/03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/dashboard/04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/dashboard/05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/dashboard/06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/dashboard/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/error/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/error/404.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/error/500.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/error/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/login/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/login/login.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/login/mail.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/logo-full.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/movie-thumb/01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/movie-thumb/02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/movie-thumb/03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/movie-thumb/04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/movie-thumb/05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/movie-thumb/06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/movie-thumb/07.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/movie-thumb/08.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/movie-thumb/09.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/movie-thumb/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/movie-thumb/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/page-img/07.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/page-img/08.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/page-img/09.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/page-img/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/page-img/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/page-img/12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/page-img/13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/page-img/14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/page-img/15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/page-img/16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/page-img/17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/page-img/18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/page-img/19.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/page-img/20.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/page-img/21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/page-img/22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/page-img/23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/page-img/24.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/page-img/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/page-img/img-success.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/show-thumb/01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/show-thumb/02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/show-thumb/03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/show-thumb/04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/show-thumb/05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/show-thumb/06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/show-thumb/07.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/show-thumb/08.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/show-thumb/09.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/show-thumb/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/show-thumb/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/small/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/small/img-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/user/01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/user/02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/user/03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/user/04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/user/05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/user/06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/user/07.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/user/08.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/user/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/user/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/user/11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/images/user/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/js/apexcharts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/js/chart-custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/js/countdown.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/js/custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/js/dataTables.bootstrap4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/js/flatpickr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/js/jquery.appear.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/js/jquery.counterup.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/js/jquery.dataTables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/js/jquery.magnific-popup.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/js/owl.carousel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/js/select2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/js/slick.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/js/smooth-scrollbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/js/waypoints.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/back-end/js/wow.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Countrys/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Countrys/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Countrys/list.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Directors/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Directors/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Directors/list.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/font-end/core/footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/font-end/core/header.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/font-end/login-sign-up/login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/font-end/login-sign-up/sign-up.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Conntry.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Country.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Country.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Director.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Director.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Directors.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Movie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Movies/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Movies/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Movies/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Movies/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Movies/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Movies/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/font-end/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/font-end/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -273,7 +144,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CSTDMD3" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -287,6 +158,7 @@
       <recent name="$PROJECT_DIR$/template" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/font-end/login-sign-up" />
       <recent name="$PROJECT_DIR$/public/font-end/images/favorite" />
       <recent name="$PROJECT_DIR$/public/font-end" />
     </key>
@@ -320,7 +192,11 @@
       <workItem from="1609752797899" duration="2947000" />
       <workItem from="1609800148541" duration="235000" />
       <workItem from="1609814039214" duration="3170000" />
-      <workItem from="1609839347024" duration="1668000" />
+      <workItem from="1609839347024" duration="2279000" />
+      <workItem from="1609852092383" duration="71000" />
+      <workItem from="1609866987373" duration="1672000" />
+      <workItem from="1609897076653" duration="887000" />
+      <workItem from="1609902596247" duration="9141000" />
     </task>
     <servers />
   </component>
@@ -332,8 +208,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/font-end/master.blade.php</url>
-          <line>30</line>
-          <option name="timeStamp" value="1" />
+          <line>4</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
