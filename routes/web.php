@@ -3,6 +3,8 @@
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\DirectorController;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\ActorController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -61,6 +63,29 @@ Route::group(['prefix' => 'director'], function () {
     Route::post('/{id}/edit',[DirectorController::class,'update'])->name('directors.update');
     Route::get('/{id}/delete',[DirectorController::class ,'destroy'])->name('directors.destroy');
 });
+
+
+Route::group(['prefix' => 'actor'], function () {
+    Route::get('/',[ActorController::class ,'index'])->name('actors.list');
+
+    Route::get('/create',[ActorController::class ,'create'])->name('actors.create');
+    Route::post('/create',[ActorController::class,'store'])->name('actors.store');
+    Route::get('/{id}/edit',[ActorController::class ,'edit'])->name('actors.edit');
+    Route::post('/{id}/edit',[ActorController::class,'update'])->name('actors.update');
+    Route::get('/{id}/delete',[ActorController::class ,'destroy'])->name('actors.destroy');
+});
+
+
+Route::group(['prefix' => 'categorys'], function () {
+    Route::get('/',[CategoryController::class ,'index'])->name('category.list');
+
+    Route::get('/create',[CategoryController::class ,'create'])->name('category.create');
+    Route::post('/create',[CategoryController::class,'store'])->name('category.store');
+    Route::get('/{id}/edit',[CategoryController::class ,'edit'])->name('category.edit');
+    Route::post('/{id}/edit',[CategoryController::class,'update'])->name('category.update');
+    Route::get('/{id}/delete',[CategoryController::class ,'destroy'])->name('category.destroy');
+});
+
 
 
 

@@ -1,8 +1,6 @@
 
 
 @extends('layouts.layout')
-{{--@section('title', 'danh sah phim')--}}
-
 @section('movie')
     <div class="col-12">
         <div class="row">
@@ -40,11 +38,6 @@
                 @endif
                 </tbody>
             </table>
-
-
-            {{--            <div style="font-size:20px;text-align: right!important; ">--}}
-            {{--                {{$movie->links()}}--}}
-            {{--            </div>--}}
 
         </div>
 
