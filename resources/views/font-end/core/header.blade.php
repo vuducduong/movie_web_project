@@ -19,16 +19,16 @@
                             <div class="menu-main-menu-container">
                                 <ul id="top-menu" class="navbar-nav ml-auto">
                                     <li class="menu-item">
-                                        <a href="index-2.html">Home</a>
+                                        <a href="index-2.html">{{__('message.Home')}}</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="show-category.html">Category</a>
+                                        <a href="show-category.html">{{__('message.Category')}}</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="show-category.html">Country</a>
+                                        <a href="show-category.html">{{__('message.Country')}}</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="movie-category.html">Movies</a>
+                                        <a href="movie-category.html">{{__('message.Movies')}}</a>
                                     </li>
                                 </ul>
                             </div>
@@ -54,62 +54,20 @@
                                                     </div>
                                                 </form>
                                             </div>
-                                        </li>
-                                        <li class="nav-item nav-icon">
-                                            <a href="#" class="search-toggle position-relative">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22"
-                                                     height="22" class="noti-svg">
-                                                    <path fill="none" d="M0 0h24v24H0z" />
-                                                    <path
-                                                        d="M18 10a6 6 0 1 0-12 0v8h12v-8zm2 8.667l.4.533a.5.5 0 0 1-.4.8H4a.5.5 0 0 1-.4-.8l.4-.533V10a8 8 0 1 1 16 0v8.667zM9.5 21h5a2.5 2.5 0 1 1-5 0z" />
-                                                </svg>
-                                                <span class="bg-danger dots"></span>
-                                            </a>
-                                            <div class="iq-sub-dropdown">
-                                                <div class="iq-card shadow-none m-0">
-                                                    <div class="iq-card-body">
-                                                        <a href="#" class="iq-sub-card">
-                                                            <div class="media align-items-center">
-                                                                <img src="images/notify/thumb-1.jpg" class="img-fluid mr-3"
-                                                                     alt="streamit" />
-                                                                <div class="media-body">
-                                                                    <h6 class="mb-0 ">Boop Bitty</h6>
-                                                                    <small class="font-size-12"> just now</small>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        <a href="#" class="iq-sub-card">
-                                                            <div class="media align-items-center">
-                                                                <img src="images/notify/thumb-2.jpg" class="img-fluid mr-3"
-                                                                     alt="streamit" />
-                                                                <div class="media-body">
-                                                                    <h6 class="mb-0 ">The Last Breath</h6>
-                                                                    <small class="font-size-12">15 minutes ago</small>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        <a href="#" class="iq-sub-card">
-                                                            <div class="media align-items-center">
-                                                                <img src="images/notify/thumb-3.jpg" class="img-fluid mr-3"
-                                                                     alt="streamit" />
-                                                                <div class="media-body">
-                                                                    <h6 class="mb-0 ">The Hero Camp</h6>
-                                                                    <small class="font-size-12">1 hour ago</small>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="iq-user-dropdown search-toggle d-flex align-items-center">
-                                                <img src="images/user/user.jpg" class="img-fluid avatar-40 rounded-circle"
-                                                     alt="user">
-                                            </a>
+
                                             <div class="iq-sub-dropdown iq-user-dropdown">
                                                 <div class="iq-card shadow-none m-0">
                                                     <div class="iq-card-body p-0 pl-3 pr-3">
+                                                        <a href="pricing-plan.html" class="iq-sub-card setting-dropdown">
+                                                            <div class="media align-items-center">
+                                                                <div class="right-icon">
+                                                                    <i class="ri-file-user-line text-primary"></i>
+                                                                </div>
+                                                                <div class="media-body ml-3">
+                                                                    <h6 class="mb-0 ">Pricing Plan</h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
                                                         <a href="manage-profile.html" class="iq-sub-card setting-dropdown">
                                                             <div class="media align-items-center">
                                                                 <div class="right-icon">
@@ -127,16 +85,6 @@
                                                                 </div>
                                                                 <div class="media-body ml-3">
                                                                     <h6 class="mb-0 ">Settings</h6>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        <a href="pricing-plan.html" class="iq-sub-card setting-dropdown">
-                                                            <div class="media align-items-center">
-                                                                <div class="right-icon">
-                                                                    <i class="ri-settings-4-line text-primary"></i>
-                                                                </div>
-                                                                <div class="media-body ml-3">
-                                                                    <h6 class="mb-0 ">Pricing Plan</h6>
                                                                 </div>
                                                             </div>
                                                         </a>
@@ -158,6 +106,17 @@
                                 </div>
                             </div>
                         </div>
+                        <div>
+                            <form action="{{route('lang.setLocale')}}" method="post">
+                                @csrf
+                                <label>
+                                    <select name="language" class="form-control" onchange="this.form.submit()">
+                                        <option value="vi" @if(\Illuminate\Support\Facades\App::getLocale()=='vi') selected @endif>VN</option>
+                                        <option value="en"  @if(\Illuminate\Support\Facades\App::getLocale()=='en') selected @endif>EN</option>
+                                    </select>
+                                </label>
+                            </form>
+                        </div>
                         <div class="navbar-right menu-right">
                             <ul class="d-flex align-items-center list-inline m-0">
                                 <li class="nav-item nav-icon">
@@ -174,52 +133,8 @@
                                         </form>
                                     </div>
                                 </li>
-                                <li class="nav-item nav-icon">
-                                    <a href="#" class="search-toggle" data-toggle="search-toggle">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"
-                                             class="noti-svg">
-                                            <path fill="none" d="M0 0h24v24H0z" />
-                                            <path
-                                                d="M18 10a6 6 0 1 0-12 0v8h12v-8zm2 8.667l.4.533a.5.5 0 0 1-.4.8H4a.5.5 0 0 1-.4-.8l.4-.533V10a8 8 0 1 1 16 0v8.667zM9.5 21h5a2.5 2.5 0 1 1-5 0z" />
-                                        </svg>
-                                        <span class="bg-danger dots"></span>
-                                    </a>
-                                    <div class="iq-sub-dropdown">
-                                        <div class="iq-card shadow-none m-0">
-                                            <div class="iq-card-body">
-                                                <a href="#" class="iq-sub-card">
-                                                    <div class="media align-items-center">
-                                                        <img src="images/notify/thumb-1.jpg" class="img-fluid mr-3"
-                                                             alt="streamit" />
-                                                        <div class="media-body">
-                                                            <h6 class="mb-0 ">Boot Bitty</h6>
-                                                            <small class="font-size-12"> just now</small>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <a href="#" class="iq-sub-card">
-                                                    <div class="media align-items-center">
-                                                        <img src="images/notify/thumb-2.jpg" class="img-fluid mr-3"
-                                                             alt="streamit" />
-                                                        <div class="media-body">
-                                                            <h6 class="mb-0 ">The Last Breath</h6>
-                                                            <small class="font-size-12">15 minutes ago</small>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <a href="#" class="iq-sub-card">
-                                                    <div class="media align-items-center">
-                                                        <img src="images/notify/thumb-3.jpg" class="img-fluid mr-3"
-                                                             alt="streamit" />
-                                                        <div class="media-body">
-                                                            <h6 class="mb-0 ">The Hero Camp</h6>
-                                                            <small class="font-size-12">1 hour ago</small>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
+
+
                                 </li>
                                 <li class="nav-item nav-icon">
                                     <a href="#" class="iq-user-dropdown search-toggle p-0 d-flex align-items-center"
@@ -229,7 +144,31 @@
                                     <div class="iq-sub-dropdown iq-user-dropdown">
                                         <div class="iq-card shadow-none m-0">
                                             <div class="iq-card-body p-0 pl-3 pr-3">
-                                                <a href="manage-profile.html" class="iq-sub-card setting-dropdown">
+                                                @can('is-Admin')
+                                                <a href="{{route('admin')}}" class="iq-sub-card setting-dropdown">
+                                                    <div class="media align-items-center">
+                                                        <div class="right-icon">
+                                                            <i class="ri-file-user-line text-primary"></i>
+                                                        </div>
+                                                        <div class="media-body ml-3">
+                                                            <h6 class="mb-0 ">Admin</h6>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                @endcan
+                                                @if(!\Illuminate\Support\Facades\Auth::check())
+                                                    <a href="{{route('login')}}" class="iq-sub-card setting-dropdown">
+                                                        <div class="media align-items-center">
+                                                            <div class="right-icon">
+                                                                <i class="ri-settings-4-line text-primary"></i>
+                                                            </div>
+                                                            <div class="media-body ml-3">
+                                                                <h6 class="mb-0 ">Login</h6>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    @else
+                                                    <a href="manage-profile.html" class="iq-sub-card setting-dropdown">
                                                     <div class="media align-items-center">
                                                         <div class="right-icon">
                                                             <i class="ri-file-user-line text-primary"></i>
@@ -249,17 +188,7 @@
                                                         </div>
                                                     </div>
                                                 </a>
-                                                <a href="pricing-plan.html" class="iq-sub-card setting-dropdown">
-                                                    <div class="media align-items-center">
-                                                        <div class="right-icon">
-                                                            <i class="ri-settings-4-line text-primary"></i>
-                                                        </div>
-                                                        <div class="media-body ml-3">
-                                                            <h6 class="mb-0 ">Pricing Plan</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <a href="login.html" class="iq-sub-card setting-dropdown">
+                                                <a href="{{route('logout')}}" class="iq-sub-card setting-dropdown">
                                                     <div class="media align-items-center">
                                                         <div class="right-icon">
                                                             <i class="ri-logout-circle-line text-primary"></i>
@@ -269,6 +198,7 @@
                                                         </div>
                                                     </div>
                                                 </a>
+                                                    @endif
                                             </div>
                                         </div>
                                     </div>
