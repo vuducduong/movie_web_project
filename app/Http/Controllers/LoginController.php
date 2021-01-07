@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class LoginController extends Controller
 {
@@ -11,18 +12,7 @@ class LoginController extends Controller
             return view('font-end.login-sign-up.login');
     }
 
-    public function storeAdminLogin(Request $request){
-            $admin = [
-                    'email' => $request->email,
-                    'password'=>$request->password,
-            ];
-            if(!Auth::attempt($admin)){
-                return redirect()->route('login')->with('messageError', 'Email or Password is correct!');
-            }
-            else{
-                return redirect()->route('movies.list');
-            }
-    }
+
     public function userLogin(Request $request){
             $user = [
               'email'=>$request->email,
@@ -34,5 +24,18 @@ class LoginController extends Controller
             else{
                 return redirect()->route('movie-fontEnd.index');
             }
+    }
+
+    public function admin(){
+        if (Gate::allows('is-Admin')) {
+            return view('layouts.layout');
+        }
+        else{
+            abort(403);
+        }
+    }
+    public function logout(){
+        Auth::logout();
+        return redirect()->route('login');
     }
 }

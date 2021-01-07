@@ -14,7 +14,7 @@
                     <div class="trending-info g-border">
                         <h1 class="trending-text big-title text-uppercase mt-0">The Illusion</h1>
                         <ul class="p-0 list-inline d-flex align-items-center movie-content">
-                            <li class="text-white">Action</li>
+                            <li class="text-white">{{__('message.Action')}}</li>
                             <li class="text-white">Drama</li>
                             <li class="text-white">Thriller</li>
                         </ul>
@@ -24,7 +24,7 @@
                             <span class="trending-year">2020</span>
                         </div>
                         <div class="d-flex align-items-center series mb-4">
-                            <a href="javascript:void();"><img src="images/trending/trending-label.png" class="img-fluid"
+                            <a href="javascript:void(0);"><img src="images/trending/trending-label.png" class="img-fluid"
                                                               alt=""></a>
                             <span class="text-gold ml-3">#2 in Series Today</span>
                         </div>

@@ -36,7 +36,7 @@ class DirectorController extends Controller
         $director->save();
 
         //tao moi xong quay ve trang danh sach phim
-        return redirect()->route('Directors.list');
+        return redirect()->route('directors.list');
     }
 
     /**
@@ -74,7 +74,7 @@ class DirectorController extends Controller
         $director = Director::find($id);
         $director->fill($request->all());
         $director->save();
-        return redirect()->route('Directors.list');
+        return redirect()->route('directors.list');
     }
 
     /**
@@ -86,8 +86,7 @@ class DirectorController extends Controller
     public function destroy($id)
     {
         $director= Director::find($id);
-        $director->customers()->delete();
         $director->delete();
-        return redirect()->route('Directors.list');
+        return redirect()->route('directors.list');
     }
 }

@@ -58,7 +58,7 @@
                     </div>
                     <div class="mt-3">
                         <div class="d-flex justify-content-center links">
-                            Don't have an account? <a href="sign-up.html" class="text-primary ml-2">Sign Up</a>
+                            Don't have an account? <a href="{{route('sign-up')}}" class="text-primary ml-2">Sign Up</a>
                         </div>
                         <div class="d-flex justify-content-center links">
                             <a href="reset-password.html" class="f-link">Forgot your password?</a>

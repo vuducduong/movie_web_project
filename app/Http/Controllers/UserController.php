@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Country;
+
+use App\Models\User;
 use Illuminate\Http\Request;
 
-class CountryController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,29 +14,22 @@ class CountryController extends Controller
      */
     public function index()
     {
-        $countrys = Country::all();
-        return view('Countrys.list', compact('countrys'));
+        //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
-        return view('Countrys.create');
+        return view('font-end.login-sign-up.sign-up');
     }
 
 
     public function store(Request $request)
     {
-        $country = new Country();
-        $country->name     = $request->input('name');
-        $country->save();
-
-        //tao moi xong quay ve trang danh sach phim
-        return redirect()->route('country.list');
+        $user = new User();
+        $user->fill($request->all());
+        $user->save();
+        return view('font-end.home');
     }
 
     /**
@@ -57,8 +51,7 @@ class CountryController extends Controller
      */
     public function edit($id)
     {
-        $country = Country::findOrFail($id);
-        return view('Countrys.edit', compact('country'));
+        //
     }
 
     /**
@@ -70,17 +63,17 @@ class CountryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $country = Country::find($id);
-        $country->fill($request->all());
-        $country->save();
-        return redirect()->route('country.list');
+        //
     }
 
-
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function destroy($id)
     {
-        $country= Country::find($id);
-        $country->delete();
-        return redirect()->route('country.list');
+        //
     }
 }

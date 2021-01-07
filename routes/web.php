@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\DirectorController;
+use App\Http\Controllers\LangController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,15 +20,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+Route::middleware('setLocale')->get('/', [MovieController::class, 'indexFontEnd'])->name('movie-fontEnd.index');
+
+Route::middleware('setLocale')->prefix('user')->group(function (){
+    Route::get('/movie-fontEnd/{id}/show', [MovieController::class, 'showFontEnd'])->name('movie-fontEnd.detail');
+
+    Route::get('/login',[LoginController::class,'login'])->name('login');
+    Route::post('/login',[LoginController::class,'userLogin'])->name('success.login-user');
+    Route::post('change-language',[LangController::class,'setLocale'])->name('lang.setLocale');
+    Route::get('/dangnhap',[LoginController::class,'admin'])->name('admin');
+    Route::get('/logout',[LoginController::class,'logout'])->name('logout');
+
+    Route::get('/signup',[UserController::class,'create'])->name('sign-up');
+    Route::post('/success',[UserController::class,'store'])->name('');
+});
 
 
 
-
-Route::get('/login',[LoginController::class,'login'])->name('login');
-Route::post('/login',[LoginController::class,'storeAdminLogin'])->name('success.login');
-Route::post('/login',[LoginController::class,'userLogin'])->name('success.login-user');
-
-
+Route::get('/admin', function () {
+    return view('layouts.master');
+})->name('master');
 
 Route::group(['prefix' => 'movie'], function () {
     Route::get('/', [MovieController::class, 'index'])->name('movies.list');
@@ -36,10 +49,6 @@ Route::group(['prefix' => 'movie'], function () {
     Route::get('/{id}/edit', [MovieController::class, 'edit'])->name('movies.edit');
     Route::post('/{id}/edit', [MovieController::class, 'update'])->name('movies.update');
     Route::get('/{id}/delete', [MovieController::class, 'destroy'])->name('movies.destroy');
-
-
-    Route::get('/font-end', [MovieController::class, 'indexFontEnd'])->name('movie-fontEnd.index');
-    Route::get('/movie-fontEnd/{id}/show', [MovieController::class, 'showFontEnd'])->name('movie-fontEnd.detail');
 });
 
 Route::group(['prefix' => 'countrys'], function () {
@@ -55,7 +64,7 @@ Route::group(['prefix' => 'countrys'], function () {
 });
 
 
-Route::group(['prefix' => 'derector'], function () {
+Route::group(['prefix' => 'director'], function () {
     Route::get('/',[DirectorController::class ,'index'])->name('directors.list');
 
     Route::get('/create',[DirectorController::class ,'create'])->name('directors.create');
