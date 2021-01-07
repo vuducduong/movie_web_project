@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\DirectorController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\ActorController;
 use App\Http\Controllers\CategoryController;
@@ -23,9 +24,17 @@ use Illuminate\Support\Facades\Route;
 
 
 
+
 Route::get('/admin', function () {
     return view('layouts.master');
 })->name('master');
+
+Route::get('/login',[LoginController::class,'login'])->name('login');
+Route::post('/login',[LoginController::class,'storeAdminLogin'])->name('success.login');
+Route::post('/login',[LoginController::class,'userLogin'])->name('success.login-user');
+
+
+
 
 Route::group(['prefix' => 'movie'], function () {
     Route::get('/', [MovieController::class, 'index'])->name('movies.list');
