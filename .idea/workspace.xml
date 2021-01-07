@@ -2,48 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26d11aa2-f9c5-4f8a-8607-c1c83d004c03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609898591.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609898653.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609898667.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609898676.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609899104.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609899138.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609899162.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609899219.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609899562.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609906358.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609906575.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609916596.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609917355.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/default.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/vi/message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ActorController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_102714_add_column_image.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_07_031325_add_column_to_actors_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1609927054.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1609927282.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1609983760.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1609984148.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1609984306.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1609984310.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1609984344.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1609984476.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1609985776.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1609986102.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1609991726.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1609991778.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1609991802.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1609991976.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1609992279.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1609992909.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1609993101.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1609995689.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1609995740.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1609995768.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1609995813.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1610002478.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/video/video.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Actors/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Actors/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Actors/list.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Categorys/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Categorys/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Categorys/list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DirectorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DirectorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Actor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Actor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Movie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_28_081120_create_admins_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/Adminseeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UserSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Countrys/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Countrys/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Countrys/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Countrys/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Countrys/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Countrys/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Directors/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Directors/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Directors/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Directors/list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Movies/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Movies/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Movies/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Movies/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Movies/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Movies/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/font-end/core/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/font-end/core/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/font-end/login-sign-up/sign-up.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/font-end/login-sign-up/sign-up.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/font-end/movie-detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/font-end/movie-detail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -238,7 +238,7 @@
       <workItem from="1609939199655" duration="8140000" />
       <workItem from="1609983032411" duration="2691000" />
       <workItem from="1609988062278" duration="6662000" />
-      <workItem from="1610001235162" duration="4053000" />
+      <workItem from="1610001235162" duration="5806000" />
     </task>
     <servers />
   </component>

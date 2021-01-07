@@ -1,5 +1,4 @@
 @extends('layouts.layout')
-{{--@section('title', 'Thêm Mới phim')--}}
 @section('movie')
     <div class="col-12 col-md-12">
         <div class="row">
@@ -8,7 +7,6 @@
             </div>
             <div class="col-12">
                 <form method="post" action="{{ route('country.store') }}">
-{{--                <form method="post" >--}}
                     @csrf
                     <div class="form-group">
                         <label>Tên Quốc Gia </label>

@@ -57,6 +57,11 @@ class Movie extends Model
         'country_id',
     ];
 
+    public function actors()
+    {
+        $this->belongsToMany(Actor::class, 'movie_actors', 'movie_id', 'actor_id');
+    }
+
     public function country()
     {
         return $this->belongsTo('App\Models\Country');
