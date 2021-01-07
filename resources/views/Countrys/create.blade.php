@@ -1,16 +1,15 @@
 @extends('layouts.layout')
-{{--@section('title', 'Thêm Mới phim')--}}
 @section('movie')
     <div class="col-12 col-md-12">
         <div class="row">
             <div class="col-12">
-                <h1>Thêm Mới Thanh Pho</h1>
+                <h1>Thêm Mới Quốc Gia</h1>
             </div>
             <div class="col-12">
                 <form method="post" action="{{ route('country.store') }}">
                     @csrf
                     <div class="form-group">
-                        <label>Tên Thanh Pho/label>
+                        <label>Tên Quốc Gia </label>
                         <input type="text" class="form-control" name="name"  placeholder="Enter name" required>
                     </div>
 

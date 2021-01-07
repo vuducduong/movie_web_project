@@ -1,13 +1,11 @@
 
 
 @extends('layouts.layout')
-{{--@section('title', 'danh sah phim')--}}
-
 @section('movie')
     <div class="col-12">
         <div class="row">
             <div class="col-12">
-                <h1>Danh Sách quoc gia </h1>
+                <h1>Danh Sách Quốc Gia </h1>
             </div>
             <a style="position: absolute;left: 90%" class="btn btn-primary" href="{{ route('country.create') }}">Thêm mới</a>
 
@@ -40,11 +38,6 @@
                 @endif
                 </tbody>
             </table>
-
-
-            {{--            <div style="font-size:20px;text-align: right!important; ">--}}
-            {{--                {{$movie->links()}}--}}
-            {{--            </div>--}}
 
         </div>
 
