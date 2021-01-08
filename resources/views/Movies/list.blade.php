@@ -47,20 +47,20 @@
 
 
 
-                            <td>
-                                @php
-                                    $arr_actor = [];
-                                    $movie_id = $movie->id;
-                                    $movie = \App\Models\Actor::whereHas("movies", function (\Illuminate\Database\Eloquent\Builder $q) use ($movie_id) {
-                                        $q->where("movies.id", "=", $movie_id);
-                                    })->get();
-                                    dd($movie);
-                                    foreach ($book as $item) {
-                                        $arr_book[] = '<a href="'.route('author.detail', $item->id).'">'.$item->name.'</a>';
-                                    }
-                                    echo implode("<br/><br/>", $arr_book);
-                                @endphp
-                            </td>
+{{--                            <td>--}}
+{{--                                @php--}}
+{{--                                    $arr_actor = [];--}}
+{{--                                    $movie_id = $movie->id;--}}
+{{--                                    $movie = \App\Models\Actor::whereHas("movies", function (\Illuminate\Database\Eloquent\Builder $q) use ($movie_id) {--}}
+{{--                                        $q->where("movies.id", "=", $movie_id);--}}
+{{--                                    })->get();--}}
+{{--                                    dd($movie);--}}
+{{--                                    foreach ($book as $item) {--}}
+{{--                                        $arr_book[] = '<a href="'.route('author.detail', $item->id).'">'.$item->name.'</a>';--}}
+{{--                                    }--}}
+{{--                                    echo implode("<br/><br/>", $arr_book);--}}
+{{--                                @endphp--}}
+{{--                            </td>--}}
 
 
 
@@ -81,8 +81,16 @@
 
 
 
-                            <td><a class="btn btn-warning" href="{{ route('movies.edit', $movie->id) }}">sửa</a></td>
-                            <td><a class="btn btn-danger"  href="{{ route('movies.destroy', $movie->id) }}" class="text-danger" onclick="return confirm('Bạn chắc chắn muốn xóa?')">xóa</a></td>
+{{--                            <div class="video-container iq-main-slider">--}}
+{{--                                <video class="video d-block" controls loop>--}}
+{{--                                    <source src="{{$movie->video}}" type="video/mp4">--}}
+{{--                                </video>--}}
+{{--                            </div>--}}
+
+
+
+                            <td><a class="btn btn-warning" href="{{ route('movies.edit', $movie->id) }}">sửa</a>
+                            <a class="btn btn-danger"  href="{{ route('movies.destroy', $movie->id) }}" class="text-danger" onclick="return confirm('Bạn chắc chắn muốn xóa?')">xóa</a></td>
                         </tr>
                     @endforeach
                 @endif

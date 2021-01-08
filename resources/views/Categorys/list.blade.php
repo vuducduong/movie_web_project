@@ -1,6 +1,20 @@
 
 
 @extends('layouts.layout')
+
+@section('title')
+    <div class="iq-search-bar ml-auto">
+        <form action="{{route('category.complete_search')}}"  method="post">
+            @csrf
+            <input name="search" type="text" class="text search-input" placeholder="Search Here...">
+            <a class="search-link" href="#"><i class="ri-search-line"></i></a>
+        </form>
+    </div>
+@endsection
+
+
+
+
 @section('movie')
     <div class="col-12">
         <div class="row">
@@ -14,7 +28,7 @@
                 <tr>
                     <th scope="col">STT</th>
                     <th scope="col">Tên</th>
-                    <th scope="col">Thao Tac</th>
+                    <th scope="col">Thao Tác</th>
 
 
                     <th></th>
@@ -32,8 +46,8 @@
                             <th scope="row">{{ ++$key }}</th>
                             <td>{{ $category->name }}</td>
 
-                            <td><a class="btn btn-warning" href="{{ route('category.edit', $category->id) }}">sửa</a></td>
-                            <td><a class="btn btn-danger"  href="{{ route('category.destroy', $category->id) }}" class="text-danger" onclick="return confirm('Bạn chắc chắn muốn xóa?')">xóa</a></td>
+                            <td><a class="btn btn-warning" href="{{ route('category.edit', $category->id) }}">sửa</a>
+                            <a class="btn btn-danger"  href="{{ route('category.destroy', $category->id) }}" class="text-danger" onclick="return confirm('Bạn chắc chắn muốn xóa?')">xóa</a></td>
                         </tr>
                     @endforeach
                 @endif

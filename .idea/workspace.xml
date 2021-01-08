@@ -2,49 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26d11aa2-f9c5-4f8a-8607-c1c83d004c03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ActorController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_102714_add_column_image.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_07_031325_add_column_to_actors_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609927054.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609927282.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609983760.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609984148.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609984306.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609984310.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609984344.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609984476.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609985776.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609986102.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609991726.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609991778.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609991802.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609991976.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609992279.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609992909.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609993101.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609995689.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609995740.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609995768.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1609995813.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610002478.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/video/video.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Actors/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Actors/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Actors/list.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Categorys/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Categorys/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Categorys/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caseStudyModule3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caseStudyModule3.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Actor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Actor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Country.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Country.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Director.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Director.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Movie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Countrys/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Countrys/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Countrys/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Countrys/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Movies/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Movies/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Movies/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Movies/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/font-end/videos/bw.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/public/videos/bw.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/font-end/videos/wd1984.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/public/videos/wd1984.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/font-end/core/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/font-end/core/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/font-end/login-sign-up/sign-up.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/font-end/login-sign-up/sign-up.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/font-end/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/font-end/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +28,14 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -169,6 +150,9 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
     </include_path>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1mHD6zaxLMFac62naWRfUWIP088" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -180,9 +164,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../quangnamhd/CaseStudy-Module-3--App-Movie" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CSTDMD3" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -194,6 +179,7 @@
       <recent name="$PROJECT_DIR$/template" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/resources/views/font-end/login-sign-up" />
       <recent name="$PROJECT_DIR$/public/font-end/images/favorite" />
       <recent name="$PROJECT_DIR$/public/font-end" />
@@ -238,23 +224,15 @@
       <workItem from="1609939199655" duration="8140000" />
       <workItem from="1609983032411" duration="2691000" />
       <workItem from="1609988062278" duration="6662000" />
-      <workItem from="1610001235162" duration="5806000" />
+      <workItem from="1610001235162" duration="6118000" />
+      <workItem from="1610013567706" duration="1604000" />
+      <workItem from="1610025401171" duration="12056000" />
+      <workItem from="1610067938133" duration="5070000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/font-end/master.blade.php</url>
-          <line>4</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

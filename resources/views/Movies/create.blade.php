@@ -55,7 +55,7 @@
                             <div class="form-check">
                                 <input
                                     class="form-check-input"
-                                    name="author[]"
+                                    name="actor[]"
                                     type="checkbox"
                                     value="{{ $actor->id }}"
                                     id="flexCheckDefault"

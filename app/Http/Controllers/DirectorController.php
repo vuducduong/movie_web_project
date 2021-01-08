@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Director;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DirectorController extends Controller
 {
@@ -88,5 +89,19 @@ class DirectorController extends Controller
         $director= Director::find($id);
         $director->delete();
         return redirect()->route('directors.list');
+    }
+
+
+
+    public function search()
+    {
+        return view('layouts.layout');
+    }
+
+    public function getDirectorSearch(Request $request)
+    {
+        $search = $request->input('search');
+        $directors = DB::table('directors')->where('name' ,'like','%' .$search. '%')->get();
+        return view('Directors.list', compact('directors'));
     }
 }

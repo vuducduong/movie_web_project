@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CategoryController extends Controller
 {
@@ -97,5 +98,27 @@ class CategoryController extends Controller
         $category= Category::find($id);
         $category->delete();
         return redirect()->route('category.list');
+    }
+
+
+    public function search()
+    {
+        return view('layouts.layout');
+    }
+
+    public function getCategorySearch(Request $request)
+    {
+        $search = $request->input('search');
+        $categorys = DB::table('categories')->where('name' ,'like','%' .$search. '%')->get();
+        return view('Categorys.list', compact('categorys'));
+    }
+
+
+
+
+
+    public function showCategory(){
+        $categories = Category::all();
+        return view('font-end.core.header',compact('categories'));
     }
 }

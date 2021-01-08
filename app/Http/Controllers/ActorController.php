@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Actor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ActorController extends Controller
 {
@@ -122,4 +123,20 @@ class ActorController extends Controller
         $actor->delete();
         return redirect()->route('actors.list');
     }
+
+
+
+    public function search()
+    {
+        return view('layouts.layout');
+    }
+
+    public function getActorSearch(Request $request)
+    {
+        $search = $request->input('search');
+        $actors = DB::table('actors')->where('name' ,'like','%' .$search. '%')->get();
+        return view('Actors.list', compact('actors'));
+    }
+
+
 }

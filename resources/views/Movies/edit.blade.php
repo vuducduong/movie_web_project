@@ -55,6 +55,33 @@
 
 
 
+                    <td>
+                        @foreach($actors as $actor)
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    name="actor[]"
+                                    type="checkbox"
+                                    value="{{ $actor->id }}"
+                                    @if (\App\Models\Actor::find($actor->id)->books()->where('id', $book_detail->id)->exists())
+                                    id="flexCheckChecked"
+                                    checked
+                                    @else
+                                    id="flexCheckDefault"
+                                    @endif
+                                />
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    {{ $actor->name }}
+                                    <img class="img-responsive" src="{{ asset('uploads/'.$author->image) }}" border="1" height="64" width="64" alt=""/>
+                                </label>
+                            </div>
+                        @endforeach
+{{--                        @if($errors->any())--}}
+{{--                            <p class="alert-danger my-sm-4">{{ $errors->first('author') }}</p>--}}
+{{--                        @endif--}}
+                    </td>
+
+
 
                     <div class="form-group">
                         <label>Ảnh </label>
