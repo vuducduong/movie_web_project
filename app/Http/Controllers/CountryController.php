@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Models\Country;
 use App\Models\Movie;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\DB;
 
 class CountryController extends Controller
 {
@@ -32,7 +34,7 @@ class CountryController extends Controller
     public function store(Request $request)
     {
         $country = new Country();
-        $country->name     = $request->input('name');
+        $country->name = $request->input('name');
         $country->save();
 
         //tao moi xong quay ve trang danh sach phim
@@ -42,7 +44,7 @@ class CountryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -53,7 +55,7 @@ class CountryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -65,8 +67,8 @@ class CountryController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -80,41 +82,32 @@ class CountryController extends Controller
 
     public function destroy($id)
     {
-        $country= Country::find($id);
+        $country = Country::find($id);
         $country->delete();
         return redirect()->route('country.list');
     }
 
 
+    public function search()
+    {
+        return view('layouts.layout');
+    }
 
-
-    public function search(Request $request){
-        $search =$request->input('search');
-        if(!$search){
-            return redirect()->route('country.list');
-        }
-        $country= Country::where('name','like','%'.$search.'%')->paginate(5);
-        $countrys = Country::all();
-
-        Session::flash('search_result',true);
-
-        return view('Countrys.list',compact('country','countrys'));
+    public function getCountrySearch(Request $request)
+    {
+        $search = $request->input('search');
+        $countrys = DB::table('countries')->where('name' ,'like','%' .$search. '%')->get();
+        return view('Countrys.list', compact('countrys'));
     }
 
 
 
 
-//    public function search(Request $request)
-//    {
-//        $keyword = $request->input('keyword');
-//        if ($request->has('name')){
-//            return redirect()->route('country.list');
-//        }
-//
-//
-//        $countrys = Country::where('name', 'like', '%'  . $keyword . '%')->paginate(5);
-//        $movies = Movie::all();
-//        return view('Countrys.list', compact('countrys', 'movies'));
-//    }
 
+    public function showCountry()
+    {
+        $countries = Country::all();
+        return view('font-end.core.header', compact('countries'));
+    }
 }
+

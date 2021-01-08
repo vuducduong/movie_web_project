@@ -18,14 +18,32 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <div class="menu-main-menu-container">
                                 <ul id="top-menu" class="navbar-nav ml-auto">
-                                    <li class="menu-item">
+                                    <li class="menu-item ">
                                         <a href="index-2.html">{{__('message.Home')}}</a>
                                     </li>
-                                    <li class="menu-item">
+{{--                                    <li class="menu-item dropdown">--}}
+{{--                                        <a class="nav-link" href="#" id="navbarDropdown" >Dropdown</a>--}}
+{{--                                        <div class="dropdown-content">--}}
+{{--                                            <a class="dropdown-item" href="#">Action</a>--}}
+{{--                                            <a class="dropdown-item" href="#">Another action</a>--}}
+{{--                                            <a class="dropdown-item" href="#">Something else here</a>--}}
+{{--                                        </div>--}}
+{{--                                    </li>--}}
+                                    <li class="menu-item dropdown">
                                         <a href="show-category.html">{{__('message.Category')}}</a>
+                                        <div class="dropdown-content">
+                                            @foreach($categories as $category)
+                                                <a class="dropdown-item" href="index.php?page=iphone">{{$category->name}}</a>
+                                            @endforeach
+                                        </div>
                                     </li>
-                                    <li class="menu-item">
+                                    <li class="menu-item dropdown">
                                         <a href="show-category.html">{{__('message.Country')}}</a>
+                                        <div class="dropdown-content">
+                                            @foreach($countries as $country)
+                                                <a class="dropdown-item" href="index.php?page=iphone">{{$country->name}}</a>
+                                            @endforeach
+                                        </div>
                                     </li>
                                     <li class="menu-item">
                                         <a href="movie-category.html">{{__('message.Movies')}}</a>

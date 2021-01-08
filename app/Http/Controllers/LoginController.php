@@ -28,7 +28,7 @@ class LoginController extends Controller
 
     public function admin(){
         if (Gate::allows('is-Admin')) {
-            return view('layouts.layout');
+            return redirect()->route('admin');
         }
         else{
             abort(403);

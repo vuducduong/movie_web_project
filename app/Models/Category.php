@@ -12,7 +12,7 @@ class Category extends Model
         'name',
 
     ];
-    public function Movie(){
-        return $this->belongsTo('App\Models\Movie');
+    public function movies(){
+        return $this->belongsToMany(Movie::class,'movie_categories','category_id','movie_id');
     }
 }

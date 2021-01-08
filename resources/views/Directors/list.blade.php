@@ -1,7 +1,17 @@
 
 
 @extends('layouts.layout')
-{{--@section('title', 'danh sah phim')--}}
+
+@section('title')
+    <div class="iq-search-bar ml-auto">
+        <form action="{{route('director.complete_search')}}"  method="post">
+            @csrf
+            <input name="search" type="text" class="text search-input" placeholder="Search Here...">
+            <a class="search-link" href="#"><i class="ri-search-line"></i></a>
+        </form>
+    </div>
+@endsection
+
 
 @section('movie')
     <div class="col-12">
@@ -16,6 +26,7 @@
                 <tr>
                     <th scope="col">STT</th>
                     <th scope="col">Tên</th>
+                    <th scope="col">Thao Tác</th>
 
 
                     <th></th>
@@ -33,18 +44,13 @@
                             <th scope="row">{{ ++$key }}</th>
                             <td>{{ $director->name }}</td>
 
-                            <td><a class="btn btn-warning" href="{{ route('directors.edit', $director->id) }}">sửa</a></td>
-                            <td><a class="btn btn-danger"  href="{{ route('directors.destroy', $director->id) }}" class="text-danger" onclick="return confirm('Bạn chắc chắn muốn xóa?')">xóa</a></td>
+                            <td><a class="btn btn-warning" href="{{ route('directors.edit', $director->id) }}">sửa</a>
+                            <a class="btn btn-danger"  href="{{ route('directors.destroy', $director->id) }}" class="text-danger" onclick="return confirm('Bạn chắc chắn muốn xóa?')">xóa</a></td>
                         </tr>
                     @endforeach
                 @endif
                 </tbody>
             </table>
-
-
-            {{--            <div style="font-size:20px;text-align: right!important; ">--}}
-            {{--                {{$movie->links()}}--}}
-            {{--            </div>--}}
 
         </div>
 
