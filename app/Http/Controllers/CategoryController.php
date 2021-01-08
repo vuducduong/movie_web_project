@@ -98,4 +98,9 @@ class CategoryController extends Controller
         $category->delete();
         return redirect()->route('category.list');
     }
+
+    public function showCategory(){
+        $categories = Category::all();
+        return view('font-end.core.header',compact('categories'));
+    }
 }

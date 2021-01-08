@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Actor;
+use App\Models\Category;
 use App\Models\Country;
 use App\Models\Director;
 use App\Models\Movie;
@@ -184,10 +185,14 @@ class MovieController extends Controller
     }
     public function indexFontEnd(){
         $movies = Movie::all();
-        return view('font-end.home',compact('movies'));
+        $countries = Country::all();
+        $categories = Category::all();
+        return view('font-end.home',compact('movies','countries','categories'));
     }
     public function showFontEnd($id){
         $movie = Movie::findorfail($id);
-        return view('font-end.movie-detail',compact('movie'));
+        $categories = Category::all();
+        $countries = Country::all();
+        return view('font-end.movie-detail',compact('movie','categories','countries'));
     }
 }

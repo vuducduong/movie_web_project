@@ -1,0 +1,14 @@
+/*xử lý menu*/
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content{
+    display: none; /*ẩn danh sách đổ xuống*/
+    position: absolute;
+    z-index: 1;
+    background-color: #f5f5f5;
+}
+.dropdown:hover .dropdown-content{
+    display: block; /*hiện danh sách đổ xuống khi hover vào*/
+}

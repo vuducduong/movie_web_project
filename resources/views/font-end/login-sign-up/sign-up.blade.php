@@ -35,7 +35,7 @@
                     <div class="sign-in-page-data">
                         <div class="sign-in-from w-100 m-auto">
                             <h3 class="mb-3 text-center">Sign Up</h3>
-                            <form class="mt-4"  method="post">
+                            <form class="mt-4"  method="post" action="{{route('confirm')}}">
                                 @csrf
                                 <div class="form-group">
                                     <input type="text" name="name" class="form-control mb-0" id="exampleInputEmail2" placeholder="Enter Full Name" autocomplete="off" required>
