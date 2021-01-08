@@ -67,12 +67,12 @@ class Movie extends Model
 
     public function countries()
     {
-        return $this->belongsTo('country_id');
+        return $this->belongsTo(Country::class,'country_id');
     }
 
     public function directors()
     {
-        return $this->belongsTo('director_id');
+        return $this->belongsTo(Director::class,'director_id');
     }
 
 }

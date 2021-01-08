@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26d11aa2-f9c5-4f8a-8607-c1c83d004c03" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/caseStudyModule3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caseStudyModule3.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Country.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Country.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Director.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Director.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Movie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-end/videos/bw.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/public/videos/bw.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-end/videos/wd1984.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/public/videos/wd1984.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/font-end/core/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/font-end/core/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/font-end/login-sign-up/sign-up.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/font-end/login-sign-up/sign-up.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/font-end/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/font-end/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -227,7 +214,7 @@
       <workItem from="1610001235162" duration="6118000" />
       <workItem from="1610013567706" duration="1604000" />
       <workItem from="1610025401171" duration="12056000" />
-      <workItem from="1610067938133" duration="5070000" />
+      <workItem from="1610067938133" duration="11199000" />
     </task>
     <servers />
   </component>

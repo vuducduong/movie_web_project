@@ -31,7 +31,7 @@ Route::middleware('setLocale')->prefix('user')->group(function () {
     Route::get('/login', [LoginController::class, 'login'])->name('login');
     Route::post('/login', [LoginController::class, 'userLogin'])->name('success.login-user');
     Route::post('change-language', [LangController::class, 'setLocale'])->name('lang.setLocale');
-    Route::get('/dangnhap', [LoginController::class, 'admin'])->name('admin');
+   Route::get('/dangnhap', [LoginController::class, 'admin'])->name('admin');
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
     Route::get('/signup', [UserController::class, 'create'])->name('sign-up');
@@ -98,5 +98,9 @@ Route::middleware('auth')->prefix('admin')->group(function () {
 });
 
 
+
+Route::get('/admin', function () {
+    return view('layouts.master');
+})->name('master');
 
 

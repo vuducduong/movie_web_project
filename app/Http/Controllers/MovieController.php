@@ -74,7 +74,7 @@ class MovieController extends Controller
 
 
         if($request->hasFile('video') !== null) {
-            $movie = $request->file('videos');
+            $movie = $request->file('video');
             $filename = $movie->getClientOriginalName();
 
             $movie->storeAs('storage/video/' , $filename);
