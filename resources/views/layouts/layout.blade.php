@@ -3,6 +3,8 @@
 
 <!-- Mirrored from iqonic.design/themes/streamitnew/dashboard/html/theme/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Sep 2020 07:03:49 GMT -->
 <head>
+{{--    <base href="{{asset('/layouts/ ')}}">--}}
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -197,12 +199,21 @@
                         </a>
                     </div>
                 </div>
+
+
+
+
                 <div class="iq-search-bar ml-auto">
-                    <form action="#" class="searchbox">
+                    <form action="{{route('country.search')}}" class="input" method="post">
+                        @csrf
                         <input type="text" class="text search-input" placeholder="Search Here...">
                         <a class="search-link" href="#"><i class="ri-search-line"></i></a>
                     </form>
                 </div>
+
+
+
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"  aria-label="Toggle navigation">
                     <i class="ri-menu-3-line"></i>
                 </button>

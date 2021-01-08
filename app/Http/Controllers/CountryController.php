@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Country;
+use App\Models\Movie;
 use Illuminate\Http\Request;
 
 class CountryController extends Controller
@@ -83,4 +84,37 @@ class CountryController extends Controller
         $country->delete();
         return redirect()->route('country.list');
     }
+
+
+
+
+    public function search(Request $request){
+        $search =$request->input('search');
+        if(!$search){
+            return redirect()->route('country.list');
+        }
+        $country= Country::where('name','like','%'.$search.'%')->paginate(5);
+        $countrys = Country::all();
+
+        Session::flash('search_result',true);
+
+        return view('Countrys.list',compact('country','countrys'));
+    }
+
+
+
+
+//    public function search(Request $request)
+//    {
+//        $keyword = $request->input('keyword');
+//        if ($request->has('name')){
+//            return redirect()->route('country.list');
+//        }
+//
+//
+//        $countrys = Country::where('name', 'like', '%'  . $keyword . '%')->paginate(5);
+//        $movies = Movie::all();
+//        return view('Countrys.list', compact('countrys', 'movies'));
+//    }
+
 }

@@ -72,6 +72,10 @@ Route::group(['prefix' => 'countrys'], function () {
     Route::get('/{id}/delete',[CountryController::class ,'destroy'])->name('country.destroy');
 
 
+
+    Route::post('/search',[CountryController::class,'search'])->name('country.search');
+
+
 });
 
 
