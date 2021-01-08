@@ -1,10 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Actor;
+use App\Models\Category;
 use App\Models\Country;
 use App\Models\Director;
 use App\Models\Movie;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class MovieController extends Controller
 {
@@ -26,9 +29,10 @@ class MovieController extends Controller
     {
         $country = Country::all();
         $director = Director::all();
+        $actors = Actor::all();
 
 
-        return view('Movies.create', compact('country','director'));
+        return view('Movies.create', compact('country','director','actors'));
     }
 
     /**
@@ -62,21 +66,31 @@ class MovieController extends Controller
 
 
 
-//        $movie->video        = $request->input('video');
+//        if ($request->hasFile('video')) {
+//            $pathVideo = $request->file('video')->storeAs('videos');
+//            $movie->video = $pathVideo;
+//        }
 
 
-        if ($request->hasFile('video')) {
-            $pathVideo = $request->file('video')->store('public/video');
-            $movie->video = $pathVideo;
+
+        if($request->hasFile('video') !== null) {
+            $movie = $request->file('videos');
+            $filename = $movie->getClientOriginalName();
+
+            $movie->storeAs('storage/video/' , $filename);
+            $movie->audio = $filename;
         }
-
 
 
 
 
         $movie->director_id  =$request->input('director_id');
         $movie->country_id   =$request->input('country_id');
+
         $movie->save();
+
+        Session::flash('success', 'Upload with success');
+
         return redirect()->route('movies.list');
     }
 
@@ -123,7 +137,6 @@ class MovieController extends Controller
 
 
         if (!$request->hasFile('image')) {
-//            $movie->image = 'uploads/default.png';
         } else {
             $imageName = time() . '.' . $request->image->extension();
             $request->image->move(public_path('uploads'), $imageName);
@@ -132,20 +145,16 @@ class MovieController extends Controller
 
 
 
-//        $movie->video         = $request->input('video');
-
-
-
-//        if($request->hasFile('video')) {
-//            $currentAudio = $request->video;
-//            if($currentAudio) {
-//                Storage::delete('/pubic/' . $currentAudio);
-//            }
-//            $audio = $request->audio;
-//            $filename = $audio->getClientOriginalName();
-//            $audio->storeAs('public/video/' , $filename);
-//            $movie->video = $filename;
-//        }
+        if($request->hasFile('video')) {
+            $currentVideo = $request->video;
+            if($currentVideo) {
+                Storage::delete('/pubic/' . $currentVideo);
+            }
+            $audio = $request->audio;
+            $filename = $audio->getClientOriginalName();
+            $audio->storeAs('storage/video/' , $filename);
+            $movie->video = $filename;
+        }
 
 
 
@@ -153,7 +162,10 @@ class MovieController extends Controller
 
         $movie->director_id   = $request->input('director_id');
         $movie->country_id    = $request->input('country_id');
+
         $movie->save();
+
+
 
         return redirect()->route('movies.list');
     }
@@ -173,10 +185,14 @@ class MovieController extends Controller
     }
     public function indexFontEnd(){
         $movies = Movie::all();
-        return view('font-end.home',compact('movies'));
+        $countries = Country::all();
+        $categories = Category::all();
+        return view('font-end.home',compact('movies','countries','categories'));
     }
     public function showFontEnd($id){
         $movie = Movie::findorfail($id);
-        return view('font-end.movie-detail',compact('movie'));
+        $categories = Category::all();
+        $countries = Country::all();
+        return view('font-end.movie-detail',compact('movie','categories','countries'));
     }
 }

@@ -57,14 +57,22 @@ class Movie extends Model
         'country_id',
     ];
 
-    public function country()
+    public function actors()
     {
-        return $this->belongsTo('App\Models\Country');
+        $this->belongsToMany(Actor::class, 'movie_actors', 'movie_id', 'actor_id');
+    }
+    public function categories(){
+        $this->belongsToMany(Category::class,'movie_categories','movie_id','category_id' );
     }
 
-    public function director()
+    public function countries()
     {
-        return $this->belongsTo('App\Models\Director');
+        return $this->belongsTo('country_id');
+    }
+
+    public function directors()
+    {
+        return $this->belongsTo('director_id');
     }
 
 }

@@ -53,6 +53,8 @@
                     <li><a href="{{route('movies.list')}}" class="iq-waves-effect"><i class="las la-star-half-alt"></i><span>Danh Sách Phim</span></a></li>
                     <li><a href="{{route('directors.list')}}" class="iq-waves-effect"><i class="las la-comments"></i><span>Danh Sách Đạo Diễn</span></a></li>
                     <li><a href="{{route('country.list')}}" class="iq-waves-effect"><i class="las la-user-friends"></i><span>Danh Sách Quốc Gia</span></a></li>
+                    <li><a href="{{route('actors.list')}}" class="iq-waves-effect"><i class="las la-user-friends"></i><span>Danh Sách Diễn Viên</span></a></li>
+                    <li><a href="{{route('category.list')}}" class="iq-waves-effect"><i class="las la-user-friends"></i><span>Danh Sách Thể Loại </span></a></li>
                     <li>
                         <a href="#category" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-list-ul"></i><span>Category</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                         <ul id="category" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">

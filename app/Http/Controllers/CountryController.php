@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Country;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class CountryController extends Controller
 {
@@ -82,5 +83,9 @@ class CountryController extends Controller
         $country= Country::find($id);
         $country->delete();
         return redirect()->route('country.list');
+    }
+    public function showCountry(){
+        $countries = Country::all();
+        return view('font-end.core.header',compact('countries'));
     }
 }
