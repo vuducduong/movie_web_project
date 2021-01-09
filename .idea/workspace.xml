@@ -2,43 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26d11aa2-f9c5-4f8a-8607-c1c83d004c03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610013973.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610014929.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610077188.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610077252.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610077292.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610077411.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610077744.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610088845.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610088861.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610090114.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ActorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ActorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DirectorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DirectorController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Actor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Actor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Country.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Country.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Director.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Director.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Movie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/video/video.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Actors/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Actors/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Categorys/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Categories/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Categorys/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Categories/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Categorys/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Categories/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Countrys/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Countries/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Countrys/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Countries/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Countrys/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Countries/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Directors/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Directors/list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Movies/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Movies/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Movies/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Movies/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Movies/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Movies/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/font-end/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/font-end/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/font-end/movie-detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/font-end/movie-detail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,6 +214,7 @@
       <workItem from="1610109547409" duration="3330000" />
       <workItem from="1610113190404" duration="1661000" />
       <workItem from="1610115142828" duration="5962000" />
+      <workItem from="1610157943065" duration="4140000" />
     </task>
     <servers />
   </component>

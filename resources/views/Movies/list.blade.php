@@ -43,19 +43,19 @@
                             <td>{{ $movie->director->name }}</td>
 
 
-                            <td>
-                                @php
-                                    $arr_actor = [];
-                                    $movie_id = $movie->id;
-                                    $movie = \App\Models\Actor::whereHas("movies", function (\Illuminate\Database\Eloquent\Builder $q) use ($movie_id) {
-                                        $q->where("movies.id", "=", $movie_id);
-                                    })->get();
-                                    foreach ($movie as $item) {
-                                        $arr_book[] = '<a href="'.route('author.detail', $item->id).'">'.$item->name.'</a>';
-                                    }
-                                    echo implode("<br/><br/>", $arr_book);
-                                @endphp
-                            </td>
+{{--                            <td>--}}
+{{--                                @php--}}
+{{--                                    $arr_actor = [];--}}
+{{--                                    $movie_id = $movie->id;--}}
+{{--                                    $movie = \App\Models\Actor::whereHas("movies", function (\Illuminate\Database\Eloquent\Builder $q) use ($movie_id) {--}}
+{{--                                        $q->where("movies.id", "=", $movie_id);--}}
+{{--                                    })->get();--}}
+{{--                                    foreach ($movie as $item) {--}}
+{{--                                        $arr_book[] = '<a href="'.route('author.detail', $item->id).'">'.$item->name.'</a>';--}}
+{{--                                    }--}}
+{{--                                    echo implode("<br/><br/>", $arr_book);--}}
+{{--                                @endphp--}}
+{{--                            </td>--}}
 
 
 
