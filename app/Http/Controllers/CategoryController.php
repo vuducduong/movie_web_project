@@ -15,8 +15,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categorys = Category::all();
-        return view('Categorys.list', compact('categorys'));
+        $categories = Category::all();
+        return view('Categories.list', compact('categories'));
     }
 
     /**
@@ -26,7 +26,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('Categorys.create');
+        return view('Categories.create');
     }
 
     /**
@@ -65,7 +65,7 @@ class CategoryController extends Controller
     public function edit($id)
     {
         $category = Category::findOrFail($id);
-        return view('Categorys.edit', compact('category'));
+        return view('Categories.edit', compact('category'));
     }
 
     /**
@@ -109,8 +109,8 @@ class CategoryController extends Controller
     public function getCategorySearch(Request $request)
     {
         $search = $request->input('search');
-        $categorys = DB::table('categories')->where('name' ,'like','%' .$search. '%')->get();
-        return view('Categorys.list', compact('categorys'));
+        $categories = DB::table('categories')->where('name' ,'like','%' .$search. '%')->get();
+        return view('Categories.list', compact('categories'));
     }
 
 

@@ -13,6 +13,6 @@ class Director extends Model
 
     ];
     public function movies(){
-        return $this->hasMany(Movie::class,'director_id');
+        return $this->hasMany(Movie::class);
     }
 }

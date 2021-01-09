@@ -8,9 +8,9 @@
             <div class="col-12">
                 <form method="post" action="{{ route('movies.store') }}"  enctype="multipart/form-data">
                     @csrf
-                    <div class="form-group">
+                    <div  class="form-group">
                         <label>Tên Phim</label>
-                        <input type="text" class="form-control" name="name"  required>
+                        <input  type="text" class="form-control" name="name"  required>
                     </div>
 
                     <div class="form-group">
@@ -50,26 +50,27 @@
 
 
 
-{{--                    <td>--}}
-{{--                        @foreach($actors as $actor)--}}
-{{--                            <div class="form-check">--}}
-{{--                                <input--}}
-{{--                                    class="form-check-input"--}}
-{{--                                    name="actor[]"--}}
-{{--                                    type="checkbox"--}}
-{{--                                    value="{{ $actor->id }}"--}}
-{{--                                    id="flexCheckDefault"--}}
-{{--                                />--}}
-{{--                                <label class="form-check-label" for="flexCheckDefault">--}}
-{{--                                    {{ $actor->name }}--}}
-{{--                                    <img class="img-responsive" src="{{ asset('uploads/'.$actor->image) }}" border="1" height="64" width="64" alt=""/>--}}
-{{--                                </label>--}}
-{{--                            </div>--}}
-{{--                        @endforeach--}}
-{{--                        @if($errors->any())--}}
-{{--                            <p class="alert-danger my-sm-4">{{ $errors->first('author') }}</p>--}}
-{{--                        @endif--}}
-{{--                    </td>--}}
+
+
+                    <td>
+                        @foreach($actors as $actor)
+                            <input
+                                class="form-check-input"
+                                name="actor[]"
+                                type="checkbox"
+                                value="{{ $actor->id }}"
+                                id="flexCheckDefault"
+                            />
+                                 <label class="form-check-label" for="flexCheckDefault">
+                                  {{ $actor->name }}
+                                  <img class="img-responsive" src="{{ asset('uploads/'.$actor->image) }}" border="1" height="64" width="64" alt=""/>
+                                  </label>
+
+                        @endforeach
+                    </td>
+
+
+
 
 
                     <div class="form-group">
