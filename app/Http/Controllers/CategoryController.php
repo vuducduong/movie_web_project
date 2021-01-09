@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CategoryController extends Controller
 {
@@ -14,8 +15,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categorys = Category::all();
-        return view('Categorys.list', compact('categorys'));
+        $categories = Category::all();
+        return view('Categories.list', compact('categories'));
     }
 
     /**
@@ -25,7 +26,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('Categorys.create');
+        return view('Categories.create');
     }
 
     /**
@@ -64,7 +65,7 @@ class CategoryController extends Controller
     public function edit($id)
     {
         $category = Category::findOrFail($id);
-        return view('Categorys.edit', compact('category'));
+        return view('Categories.edit', compact('category'));
     }
 
     /**
@@ -98,6 +99,23 @@ class CategoryController extends Controller
         $category->delete();
         return redirect()->route('category.list');
     }
+
+
+    public function search()
+    {
+        return view('layouts.layout');
+    }
+
+    public function getCategorySearch(Request $request)
+    {
+        $search = $request->input('search');
+        $categories = DB::table('categories')->where('name' ,'like','%' .$search. '%')->get();
+        return view('Categories.list', compact('categories'));
+    }
+
+
+
+
 
     public function showCategory(){
         $categories = Category::all();

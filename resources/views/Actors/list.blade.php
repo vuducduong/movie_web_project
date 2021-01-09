@@ -1,5 +1,16 @@
 @extends('layouts.layout')
 
+@section('title')
+    <div class="iq-search-bar ml-auto">
+        <form action="{{route('actors.complete_search')}}"  method="post">
+            @csrf
+            <input name="search" type="text" class="text search-input" placeholder="Search Here...">
+            <a class="search-link" href="#"><i class="ri-search-line"></i></a>
+        </form>
+    </div>
+@endsection
+
+
 @section('movie')
     <div class="col-12">
         <div class="row">
@@ -39,8 +50,8 @@
                             <td><img src="{{ asset($actor->image) }}" height="100px" width="100px"></td>
 
 
-                            <td><a class="btn btn-warning" href="{{ route('actors.edit', $actor->id) }}">sửa</a></td>
-                            <td><a class="btn btn-danger"  href="{{ route('actors.destroy', $actor->id) }}" class="text-danger" onclick="return confirm('Bạn chắc chắn muốn xóa?')">xóa</a></td>
+                            <td><a class="btn btn-warning" href="{{ route('actors.edit', $actor->id) }}">sửa</a>
+                            <a class="btn btn-danger"  href="{{ route('actors.destroy', $actor->id) }}" class="text-danger" onclick="return confirm('Bạn chắc chắn muốn xóa?')">xóa</a></td>
                         </tr>
                     @endforeach
                 @endif

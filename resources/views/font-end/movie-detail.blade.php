@@ -2,7 +2,7 @@
 @section('content')
     <div class="video-container iq-main-slider">
         <video class="video d-block" controls loop>
-            <source src="{{$movie->video}}" type="video/mp4">
+            <source src="{{asset('videos/'.$movie->video)}}" type="video/mp4">
         </video>
     </div>
     <!-- Banner End -->

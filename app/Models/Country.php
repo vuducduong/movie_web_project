@@ -10,9 +10,9 @@ class Country extends Model
     use HasFactory;
     protected $fillable = [
         'name',
-
     ];
-        public function movies(){
-        return $this->hasMany(Movie::class,'country_id');
+
+    public function movies(){
+        return $this->hasMany(Movie::class);
     }
 }
