@@ -19,7 +19,7 @@
                     <th scope="col">THời Gian</th>
                     <th scope="col">Quốc Gia</th>
                     <th scope="col">Đaọ Diễn</th>
-                    <th scope="col">dien vien</th>
+{{--                    <th scope="col">dien vien</th>--}}
                     <th scope="col">Ảnh phim</th>
                     <th scope="col">Video</th>
                     <th scope="col">Thao Tác</th>

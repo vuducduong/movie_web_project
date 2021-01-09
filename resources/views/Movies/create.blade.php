@@ -50,26 +50,26 @@
 
 
 
-                    <td>
-                        @foreach($actors as $actor)
-                            <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    name="actor[]"
-                                    type="checkbox"
-                                    value="{{ $actor->id }}"
-                                    id="flexCheckDefault"
-                                />
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    {{ $actor->name }}
-                                    <img class="img-responsive" src="{{ asset('uploads/'.$actor->image) }}" border="1" height="64" width="64" alt=""/>
-                                </label>
-                            </div>
-                        @endforeach
+{{--                    <td>--}}
+{{--                        @foreach($actors as $actor)--}}
+{{--                            <div class="form-check">--}}
+{{--                                <input--}}
+{{--                                    class="form-check-input"--}}
+{{--                                    name="actor[]"--}}
+{{--                                    type="checkbox"--}}
+{{--                                    value="{{ $actor->id }}"--}}
+{{--                                    id="flexCheckDefault"--}}
+{{--                                />--}}
+{{--                                <label class="form-check-label" for="flexCheckDefault">--}}
+{{--                                    {{ $actor->name }}--}}
+{{--                                    <img class="img-responsive" src="{{ asset('uploads/'.$actor->image) }}" border="1" height="64" width="64" alt=""/>--}}
+{{--                                </label>--}}
+{{--                            </div>--}}
+{{--                        @endforeach--}}
 {{--                        @if($errors->any())--}}
 {{--                            <p class="alert-danger my-sm-4">{{ $errors->first('author') }}</p>--}}
 {{--                        @endif--}}
-                    </td>
+{{--                    </td>--}}
 
 
                     <div class="form-group">

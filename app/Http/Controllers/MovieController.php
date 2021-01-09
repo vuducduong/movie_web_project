@@ -9,6 +9,7 @@ use App\Models\Movie;
 use App\Models\MovieActor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 
 class MovieController extends Controller
 {
@@ -66,56 +67,58 @@ class MovieController extends Controller
 //        }
 
 
-        if ($request->hasFile('video') !== null) {
-            $movie = $request->file('videos');
-            $filename = $movie->getClientOriginalName();
-
-            $movie->storeAs('storage/video/', $filename);
-            $movie->audio = $filename;
-        }
+//        if ($request->hasFile('video') !== null) {
+//            $movie = $request->file('videos');
+//            $filename = $movie->getClientOriginalName();
+//
+//            $movie->storeAs('storage/video/', $filename);
+//            $movie->audio = $filename;
+//        }
 
 
         $movie->director_id = $request->input('director_id');
         $movie->country_id = $request->input('country_id');
 
 
-        if ($request->hasFile('image')) {
-            try {
-                $imageName = time() . '.' . $request->img->getClientOriginalExtension();
-                $request->img->move(public_path('images'), $imageName);
-            } catch (\Exception $e) {
-                if (file_exists(public_path('images') . "/" . $imageName)) {
-                    unlink(public_path('images') . "/" . $imageName);
-                }
-                //return back()->with('error', 'Your must upload image file.');
-            }
-            try {
-                $movie->fill($request->all());
-                $movie->img = $imageName;
-                $movie->save();
-                $last_inserrt_movie_id = $movie->id;
-                foreach ($request->actor as $actors) {
-                    $Movie_actors = new MovieActor();
-                    $Movie_actors->actor_id = $actors;
-                    $Movie_actors->movie_id = $last_inserrt_movie_id;
-                    $Movie_actors->save();
-                }
-            } catch (\Exception $e) {
-                if (file_exists(public_path('images') . "/" . $imageName)) {
-                    unlink(public_path('images') . "/" . $imageName);
-                }
-
-
-            }
-
-
+//        if ($request->hasFile('image')) {
+//            try {
+//                $imageName = time() . '.' . $request->img->getClientOriginalExtension();
+//                $request->img->move(public_path('images'), $imageName);
+//            } catch (\Exception $e) {
+//                if (file_exists(public_path('images') . "/" . $imageName)) {
+//                    unlink(public_path('images') . "/" . $imageName);
+//                }
+//                //return back()->with('error', 'Your must upload image file.');
+//            }
+//            try {
+//                $movie->fill($request->all());
+//                $movie->img = $imageName;
+//                $movie->save();
+//                $last_inserrt_movie_id = $movie->id;
+//                foreach ($request->actor as $actors) {
+//                    $Movie_actors = new MovieActor();
+//                    $Movie_actors->actor_id = $actors;
+//                    $Movie_actors->movie_id = $last_inserrt_movie_id;
+//                    $Movie_actors->save();
+//                }
+//            } catch (\Exception $e) {
+//                if (file_exists(public_path('images') . "/" . $imageName)) {
+//                    unlink(public_path('images') . "/" . $imageName);
+//                }
+//
+//
+//            }
+//
+//
             $movie->save();
 
             Session::flash('success', 'Upload with success');
 
             return redirect()->route('movies.list');
         }
-    }
+
+
+
 
     /**
      * Display the specified resource.
