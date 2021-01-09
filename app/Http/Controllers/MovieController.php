@@ -27,8 +27,9 @@ class MovieController extends Controller
         $country = Country::all();
         $director = Director::all();
         $actors = Actor::all();
+        $categories = Category::all();
 
-        return view('Movies.create', compact('country', 'director', 'actors'));
+        return view('Movies.create', compact('country', 'director', 'actors','categories'));
     }
 
     /**
@@ -120,9 +121,13 @@ class MovieController extends Controller
                 $movie->video = $videoName;
                 $movie->save();
 
-                foreach ($request->actor as $actor1) {
-                    Actor::find($actor1)->movies()->attach($movie->id);
+                foreach ($request->actor as $value) {
+                    Actor::find($value)->movies()->attach($movie->id);
                 }
+                foreach ($request->category as $value) {
+                    Category::find($value)->movies()->attach($movie->id);
+                }
+
 
             } catch (\Exception $e) {
                 if (file_exists(public_path('images') . "/" . $imageName)) {
@@ -155,6 +160,9 @@ class MovieController extends Controller
         $movies = Movie::find($id);
 
         $movies->delete();
+        foreach($request->actor as $actor1){
+            Actor::find($actor1)->movies()->detach();
+        }
         return redirect()->route('movies.list');
     }
 
