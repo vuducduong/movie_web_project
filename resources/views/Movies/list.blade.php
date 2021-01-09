@@ -19,7 +19,7 @@
                     <th scope="col">THời Gian</th>
                     <th scope="col">Quốc Gia</th>
                     <th scope="col">Đaọ Diễn</th>
-                    <th scope="col">dien vien</th>
+{{--                    <th scope="col">dien vien</th>--}}
                     <th scope="col">Ảnh phim</th>
                     <th scope="col">Video</th>
                     <th scope="col">Thao Tác</th>
@@ -42,52 +42,11 @@
                             <td>{{ $movie->time }}</td>
                             <td>{{ $movie->country->name }}</td>
                             <td>{{ $movie->director->name }}</td>
-
-
-
-
-
-{{--                            <td>--}}
-{{--                                @php--}}
-{{--                                    $arr_actor = [];--}}
-{{--                                    $movie_id = $movie->id;--}}
-{{--                                    $movie = \App\Models\Actor::whereHas("movies", function (\Illuminate\Database\Eloquent\Builder $q) use ($movie_id) {--}}
-{{--                                        $q->where("movies.id", "=", $movie_id);--}}
-{{--                                    })->get();--}}
-{{--                                    dd($movie);--}}
-{{--                                    foreach ($book as $item) {--}}
-{{--                                        $arr_book[] = '<a href="'.route('author.detail', $item->id).'">'.$item->name.'</a>';--}}
-{{--                                    }--}}
-{{--                                    echo implode("<br/><br/>", $arr_book);--}}
-{{--                                @endphp--}}
-{{--                            </td>--}}
-
-
-
-
-
-                            <td><img src="{{ asset($movie->image) }}" height="100px" width="100px"></td>
-
-
-{{--                            <td>--}}
-{{--                                <a href="{{ route('movies.list', $movie->id) }}">{{ $movie->video }}</a>--}}
-{{--                            </td>--}}
-
-
-                            <td> <video controls>
-                                <source src="{{ url('storage/video/' . $movie->video) }}" type="video/mp4">
+                            <td><img src="{{ asset('images/'.$movie->image) }}" height="100px" width="100px"></td>
+                            <td> <video  height="100px" controls>
+                                <source src="{{ asset('videos/' . $movie->video) }}" type="video/mp4">
                                 Your browser does not support the audio element.
                                 </video></td>
-
-
-
-{{--                            <div class="video-container iq-main-slider">--}}
-{{--                                <video class="video d-block" controls loop>--}}
-{{--                                    <source src="{{$movie->video}}" type="video/mp4">--}}
-{{--                                </video>--}}
-{{--                            </div>--}}
-
-
 
                             <td><a class="btn btn-warning" href="{{ route('movies.edit', $movie->id) }}">sửa</a>
                             <a class="btn btn-danger"  href="{{ route('movies.destroy', $movie->id) }}" class="text-danger" onclick="return confirm('Bạn chắc chắn muốn xóa?')">xóa</a></td>

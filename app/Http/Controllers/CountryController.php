@@ -16,8 +16,8 @@ class CountryController extends Controller
      */
     public function index()
     {
-        $countrys = Country::all();
-        return view('Countrys.list', compact('countrys'));
+        $countries = Country::all();
+        return view('Countries.list', compact('countries'));
     }
 
     /**
@@ -27,7 +27,7 @@ class CountryController extends Controller
      */
     public function create()
     {
-        return view('Countrys.create');
+        return view('Countries.create');
     }
 
 
@@ -61,7 +61,7 @@ class CountryController extends Controller
     public function edit($id)
     {
         $country = Country::findOrFail($id);
-        return view('Countrys.edit', compact('country'));
+        return view('Countries.edit', compact('country'));
     }
 
     /**
@@ -96,8 +96,8 @@ class CountryController extends Controller
     public function getCountrySearch(Request $request)
     {
         $search = $request->input('search');
-        $countrys = DB::table('countries')->where('name' ,'like','%' .$search. '%')->get();
-        return view('Countrys.list', compact('countrys'));
+        $countries = DB::table('countries')->where('name' ,'like','%' .$search. '%')->get();
+        return view('Countries.list', compact('countries'));
     }
 
 

@@ -8,9 +8,9 @@
             <div class="col-12">
                 <form method="post" action="{{ route('movies.store') }}"  enctype="multipart/form-data">
                     @csrf
-                    <div class="form-group">
+                    <div  class="form-group">
                         <label>Tên Phim</label>
-                        <input type="text" class="form-control" name="name"  required>
+                        <input  type="text" class="form-control" name="name"  required>
                     </div>
 
                     <div class="form-group">
