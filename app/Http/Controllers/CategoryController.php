@@ -15,7 +15,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
+//        $categories = Category::all();
+        $categories =Category::paginate(5);
+
         return view('Categories.list', compact('categories'));
     }
 
@@ -96,6 +98,7 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         $category= Category::find($id);
+        $category->movies()->detach();
         $category->delete();
         return redirect()->route('category.list');
     }
@@ -109,7 +112,7 @@ class CategoryController extends Controller
     public function getCategorySearch(Request $request)
     {
         $search = $request->input('search');
-        $categories = DB::table('categories')->where('name' ,'like','%' .$search. '%')->get();
+        $categories = DB::table('categories')->where('name' ,'like','%' .$search. '%')->paginate(5);
         return view('Categories.list', compact('categories'));
     }
 

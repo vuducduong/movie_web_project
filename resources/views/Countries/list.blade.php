@@ -40,7 +40,7 @@
                 @else
                     @foreach($countries as $key => $country)
                         <tr>
-                            <th scope="row">{{ ++$key }}</th>
+                            <th scope="row">{{ $key +$countries-> firstItem()  }}</th>
                             <td>{{ $country->name }}</td>
 
                             <td><a class="btn btn-warning" href="{{ route('country.edit', $country->id) }}">sửa</a>
@@ -54,5 +54,8 @@
         </div>
 
     </div>
+
+    <div style="float: right;">{{ $countries->links( "pagination::bootstrap-4") }}</div>
+
 @endsection
 

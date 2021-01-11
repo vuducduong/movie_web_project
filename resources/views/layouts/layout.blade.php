@@ -51,7 +51,7 @@
         <div id="sidebar-scrollbar">
             <nav class="iq-sidebar-menu">
                 <ul id="iq-sidebar-toggle" class="iq-menu">
-                    <li class="active active-menu"><a href="{{route('master')}}" class="iq-waves-effect"><i class="las la-home iq-arrow-left"></i><span>Dashboard</span></a></li>
+                    <li class="active active-menu"><a href="{{route('master')}}" class="iq-waves-effect"><i class="las la-home iq-arrow-left"></i><span>Trang Chủ Admin</span></a></li>
                     <li><a href="{{route('movies.list')}}" class="iq-waves-effect"><i class="las la-star-half-alt"></i><span>Danh Sách Phim</span></a></li>
                     <li><a href="{{route('directors.list')}}" class="iq-waves-effect"><i class="las la-comments"></i><span>Danh Sách Đạo Diễn</span></a></li>
                     <li><a href="{{route('country.list')}}" class="iq-waves-effect"><i class="las la-user-friends"></i><span>Danh Sách Quốc Gia</span></a></li>
@@ -456,7 +456,7 @@
                 </ul>
             </div>
             <div class="col-lg-6 text-right">
-                Copyright 2020 <a href="#">Streamit</a> All Rights Reserved.
+                Happy New year 2021 ^^ <a href="#">Streamit</a> All Rights Reserved.
             </div>
         </div>
     </div>

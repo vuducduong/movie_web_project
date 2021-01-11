@@ -15,6 +15,7 @@ class  Movie extends Model
         'name',
         'year',
         'time',
+        'description',
         'image',
         'video',
         'director_id',
@@ -26,15 +27,18 @@ class  Movie extends Model
        return $this->belongsToMany(Actor::class, 'movie_actors', 'movie_id', 'actor_id');
     }
     public function categories(){
+
         return $this->belongsToMany(Category::class,'movie_categories','movie_id','category_id' );
+
     }
 
 
-    public function director()
+    public function director(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Director::class,'director_id');
     }
-    public function country(){
+    public function country(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
         return $this->belongsTo(Country::class,'country_id');
     }
 }

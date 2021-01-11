@@ -26,9 +26,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-//        $countries = Country::all();
-//        $categories = Category::all();
-//        View::share('countries',$countries);
-//        View::share('categories',$categories);
+        $countries = Country::all();
+        $categories = Category::all();
+        View::share('countries',$countries);
+        View::share('categories',$categories);
     }
 }

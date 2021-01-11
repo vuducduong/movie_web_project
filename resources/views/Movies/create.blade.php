@@ -20,7 +20,13 @@
 
                     <div class="form-group">
                         <label>Time</label>
-                        <input type="number" class="form-control" name="time" required>
+                        <input type="time" class="form-control" name="time" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mô Tả </label><br>
+                        <textarea  class="form-control" name="description" cols="30" rows="10" required></textarea>
+{{--                        <input type="text" class="form-control" name="description" required>--}}
                     </div>
 
 
@@ -44,6 +50,7 @@
                     </div>
 
 
+
                     <div class="form-group">
                         <label>Diễn Viên</label>
                         <div class="form-group">
@@ -55,6 +62,8 @@
                             </td>
                         </div>
                     </div>
+
+
                     <div class="form-group">
                         <label>Thể Loại</label>
                         <select class="form-control" id="exampleFormControlSelect1" name="category[]">
@@ -64,6 +73,7 @@
                         </select>
                         </td>
                     </div>
+
                     <div class="form-group">
                         <label>Ảnh </label>
                         <input type="file" class="form-control" name="image">

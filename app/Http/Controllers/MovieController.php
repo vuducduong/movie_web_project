@@ -9,7 +9,9 @@ use App\Models\Director;
 use App\Models\Movie;
 use App\Models\MovieActor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 
 class MovieController extends Controller
 {
@@ -17,7 +19,9 @@ class MovieController extends Controller
     public function index()
     {
 
-        $movies = Movie::with(['country', 'director'])->get();
+//        $movies = Movie::with(['country', 'director'])->get();
+        $movies =Movie::paginate(3);
+//        dd($movies);
         return view('Movies.list', compact('movies'));
     }
 
@@ -41,6 +45,7 @@ class MovieController extends Controller
      */
     public function store(Request $request, Movie $movie)
     {
+
         if ($request->hasFile('image')) {
             try {
                 $imageName = time() . '.' . $request->image->getClientOriginalExtension();
@@ -70,10 +75,12 @@ class MovieController extends Controller
                 }
 
             }
+//            dd($movie);
             return redirect()->route('movies.list');
         }
         return back()->with('error', 'You must select image file to upload.');
     }
+
 
 
     /**
@@ -165,6 +172,32 @@ class MovieController extends Controller
 
         return redirect()->route('movies.list');
     }
+
+
+
+
+    public function search()
+    {
+        return view('layouts.layout');
+    }
+
+
+
+    public function getMovieSearch(Request $request)
+    {
+        $search = $request->input('search');
+//        $countries = Country::all();
+//        $categories = Category::all();
+//        $directors = Director::all();
+//        $actors = Actor::all();
+//        $movie = Movie::all();
+
+        $movies = DB::table('movies')->where('name' ,'like','%' .$search. '%')->paginate(3);
+        return view('Movies.list', compact('movies',));
+    }
+
+
+
 
 
     public function indexFontEnd()
