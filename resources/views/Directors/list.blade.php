@@ -41,7 +41,7 @@
                 @else
                     @foreach($directors as $key => $director)
                         <tr>
-                            <th scope="row">{{ ++$key }}</th>
+                            <th scope="row">{{ $key +$directors-> firstItem() }}</th>
                             <td>{{ $director->name }}</td>
 
                             <td><a class="btn btn-warning" href="{{ route('directors.edit', $director->id) }}">sửa</a>
@@ -55,4 +55,6 @@
         </div>
 
     </div>
+
+    <div style="float: right;">{{ $directors->links( "pagination::bootstrap-4") }}</div>
 @endsection

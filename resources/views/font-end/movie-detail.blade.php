@@ -12,26 +12,28 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="trending-info g-border">
-                        <h1 class="trending-text big-title text-uppercase mt-0">The Illusion</h1>
+                        <h1 class="trending-text big-title text-uppercase mt-0">{{$movie->name}}</h1>
                         <ul class="p-0 list-inline d-flex align-items-center movie-content">
+
                             <li class="text-white">{{__('message.Action')}}</li>
-                            <li class="text-white">Drama</li>
-                            <li class="text-white">Thriller</li>
+
+{{--                            <li class="text-white">{{$movie->actor->name}}</li>--}}
+
+
+                            <li class="text-white">Quốc Gia : {{$movie->country->name}}</li>
+                            <li class="text-white">Đạo Diễn : {{ $movie->director->name }}</li>
                         </ul>
                         <div class="d-flex align-items-center text-white text-detail">
-                            <span class="badge badge-secondary p-3">13+</span>
-                            <span class="ml-3">3h 15m</span>
-                            <span class="trending-year">2020</span>
+                            <span class="badge badge-secondary p-3">18+</span>
+                            <span class="ml-3">Thời Gian : {{$movie->time}}</span>
+                            <span class="trending-year"> Năm Sản Xuất : {{$movie->year}}</span>
                         </div>
                         <div class="d-flex align-items-center series mb-4">
                             <a href="javascript:void(0);"><img src="images/trending/trending-label.png" class="img-fluid"
                                                               alt=""></a>
                             <span class="text-gold ml-3">#2 in Series Today</span>
                         </div>
-                        <p class="trending-dec w-100 mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                            unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                            survived not only five centuries.</p>
+                        <p class="trending-dec w-100 mb-0"> <h3>Giới Thiệu Phim : </h3> {{$movie->description}}</p>
                         <ul class="list-inline p-0 mt-4 share-icons music-play-lists">
                             <li><span><i class="ri-add-line"></i></span></li>
                             <li><span><i class="ri-heart-fill"></i></span></li>

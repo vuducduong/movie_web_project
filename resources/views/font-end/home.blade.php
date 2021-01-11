@@ -155,7 +155,7 @@
                                     <a href="movie-details.html">
                                         <div class="block-images position-relative">
                                             <div class="img-box">
-                                                <img src="{{asset('images/'.$movie->image)}}" class="img-fluid" alt="">
+                                                <img  height="150px" width="300px" src="{{asset('images/'.$movie->image)}}" class="img-fluid" alt="">
                                             </div>
                                             <div class="block-description">
                                                 <h6>{{$movie->name}}</h6>

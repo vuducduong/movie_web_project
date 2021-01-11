@@ -10,7 +10,10 @@ class DirectorController extends Controller
 
     public function index()
     {
-        $directors = Director::all();
+//        $directors = Director::all();
+
+        $directors =Director::paginate(5);
+
         return view('Directors.list', compact('directors'));
     }
 
@@ -101,7 +104,7 @@ class DirectorController extends Controller
     public function getDirectorSearch(Request $request)
     {
         $search = $request->input('search');
-        $directors = DB::table('directors')->where('name' ,'like','%' .$search. '%')->get();
+        $directors = DB::table('directors')->where('name' ,'like','%' .$search. '%')->paginate(5);
         return view('Directors.list', compact('directors'));
     }
 }

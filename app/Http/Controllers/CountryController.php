@@ -16,7 +16,10 @@ class CountryController extends Controller
      */
     public function index()
     {
-        $countries = Country::all();
+//        $countries = Country::all();
+        $countries =Country::paginate(5);
+
+
         return view('Countries.list', compact('countries'));
     }
 
@@ -96,7 +99,7 @@ class CountryController extends Controller
     public function getCountrySearch(Request $request)
     {
         $search = $request->input('search');
-        $countries = DB::table('countries')->where('name' ,'like','%' .$search. '%')->get();
+        $countries = DB::table('countries')->where('name' ,'like','%' .$search. '%')->paginate(5);
         return view('Countries.list', compact('countries'));
     }
 

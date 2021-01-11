@@ -43,7 +43,7 @@
                 @else
                     @foreach($categories as $key => $category)
                         <tr>
-                            <th scope="row">{{ ++$key }}</th>
+                            <th scope="row">{{ $key +$categories-> firstItem() }}</th>
                             <td>{{ $category->name }}</td>
 
                             <td><a class="btn btn-warning" href="{{ route('category.edit', $category->id) }}">sửa</a>
@@ -57,6 +57,9 @@
         </div>
 
     </div>
+
+    <div style="float: right;">{{ $categories->links( "pagination::bootstrap-4") }}</div>
+
 @endsection
 
 
