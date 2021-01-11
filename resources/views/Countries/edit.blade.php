@@ -10,7 +10,7 @@
                 <form method="post" action="{{ route('country.update', $country->id) }}">
                     @csrf
                     <div class="form-group">
-                        <label>Tên thanh pho</label>
+                        <label>Tên Quốc Gia </label>
                         <input type="text" class="form-control" name="name"  value="{{ $country->name }}"  required>
                     </div>
 

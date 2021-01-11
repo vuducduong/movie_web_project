@@ -20,7 +20,14 @@
 
                     <div class="form-group">
                         <label>Time</label>
-                        <input type="number" class="form-control" name="time"  value="{{ $movie->time}}"  required>
+                        <input type="time" class="form-control" name="time"  value="{{ $movie->time}}"  required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Mô Tả</label>
+                        <textarea  class="form-control" name="description" cols="30" rows="10" required  value="{{ $movie->description}}"></textarea>
+{{--                        <input type="text" class="form-control" name="time"   required>--}}
                     </div>
 
 
@@ -52,6 +59,31 @@
                         </select>
                     </div>
 
+
+
+
+
+
+                    <div class="form-group">
+                        <label>Diễn Viên</label>
+                        <div class="form-group">
+                            <select class="form-control" id="exampleFormControlSelect1" name="actor[]">
+                                @foreach($actors as $actor)
+                                    <option value="{{$actor->id}}">{{$actor->name}}</option>
+                                @endforeach
+                            </select>
+                            </td>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Thể Loại</label>
+                        <select class="form-control" id="exampleFormControlSelect1" name="category[]">
+                            @foreach($categories as $category)
+                                <option value="{{$category->id}}">{{$category->name}}</option>
+                            @endforeach
+                        </select>
+                        </td>
+                    </div>
 
 
 

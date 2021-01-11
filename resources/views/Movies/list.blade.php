@@ -1,5 +1,16 @@
 @extends('layouts.layout')
 
+@section('title')
+    <div class="iq-search-bar ml-auto">
+        <form action="{{route('movies.complete_search')}}"  method="post">
+            @csrf
+            <input name="search" type="text" class="text search-input" placeholder="Search Here...">
+            <a class="search-link" href="#"><i class="ri-search-line"></i></a>
+        </form>
+    </div>
+@endsection
+
+
 @section('movie')
     <div class="col-12">
         <div class="row">
@@ -16,6 +27,7 @@
                     <th scope="col">Tên Phim</th>
                     <th scope="col">Năm Sản Xuất</th>
                     <th scope="col">THời Gian</th>
+                    <th scope="col">Mô tả</th>
                     <th scope="col">Quốc Gia</th>
                     <th scope="col">Đaọ Diễn</th>
                     {{--                    <th scope="col">dien vien</th>--}}
@@ -35,10 +47,13 @@
                 @else
                     @foreach($movies as $key => $movie)
                         <tr>
-                            <th scope="row">{{ ++$key }}</th>
+                            <th scope="row">{{ $key +$movies-> firstItem()  }}</th>
                             <td>{{ $movie->name }}</td>
                             <td>{{ $movie->year }}</td>
                             <td>{{ $movie->time }}</td>
+                            <td>
+                                <textarea cols="30" rows="5" class="form-control">{{ $movie->description }}</textarea>
+                            </td>
                             <td>{{ $movie->country->name }}</td>
                             <td>{{ $movie->director->name }}</td>
 
@@ -78,8 +93,16 @@
                 </tbody>
             </table>
 
+{{--            <div style="font-size:20px;text-align: left!important; ">--}}
+{{--                {{$movies->links("pagination::bootstrap-4")}}--}}
+{{--            </div>--}}
+
+
         </div>
 
     </div>
+
+    <div style="float: right;">{{ $movies->links( "pagination::bootstrap-4") }}</div>
+
 @endsection
 

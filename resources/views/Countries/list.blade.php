@@ -33,14 +33,14 @@
                 </tr>
                 </thead>
                 <tbody>
-                @if(count($countrys) == 0)
+                @if(count($countries) == 0)
                     <tr>
                         <td colspan="7" class="text-center">Không có dữ liệu</td>
                     </tr>
                 @else
-                    @foreach($countrys as $key => $country)
+                    @foreach($countries as $key => $country)
                         <tr>
-                            <th scope="row">{{ ++$key }}</th>
+                            <th scope="row">{{ $key +$countries-> firstItem()  }}</th>
                             <td>{{ $country->name }}</td>
 
                             <td><a class="btn btn-warning" href="{{ route('country.edit', $country->id) }}">sửa</a>
@@ -54,5 +54,8 @@
         </div>
 
     </div>
+
+    <div style="float: right;">{{ $countries->links( "pagination::bootstrap-4") }}</div>
+
 @endsection
 

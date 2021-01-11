@@ -47,6 +47,9 @@ Route::group(['prefix' => 'movie'], function () {
     Route::get('/{id}/edit', [MovieController::class, 'edit'])->name('movies.edit');
     Route::post('/{id}/edit', [MovieController::class, 'update'])->name('movies.update');
     Route::get('/{id}/delete', [MovieController::class, 'destroy'])->name('movies.destroy');
+
+    Route::post('/search', [MovieController::class, 'getMovieSearch'])->name('movies.complete_search');
+    Route::get('/search', [MovieController::class, 'search'])->name('movies.search');
 });
 
 Route::group(['prefix' => 'country'], function () {

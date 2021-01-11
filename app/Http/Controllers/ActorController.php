@@ -15,7 +15,10 @@ class ActorController extends Controller
      */
     public function index()
     {
-        $actors = Actor::all();
+//        $actors = Actor::all();
+
+        $actors =Actor::paginate(5);
+
         return view('Actors.list', compact('actors'));
     }
 
@@ -120,6 +123,7 @@ class ActorController extends Controller
     public function destroy($id)
     {
         $actor= Actor::find($id);
+        $actor->movies()->detach();
         $actor->delete();
         return redirect()->route('actors.list');
     }
@@ -134,7 +138,7 @@ class ActorController extends Controller
     public function getActorSearch(Request $request)
     {
         $search = $request->input('search');
-        $actors = DB::table('actors')->where('name' ,'like','%' .$search. '%')->get();
+        $actors = DB::table('actors')->where('name' ,'like','%' .$search. '%')->paginate(5);
         return view('Actors.list', compact('actors'));
     }
 

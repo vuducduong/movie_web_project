@@ -15,6 +15,7 @@ class Movie extends Model
         'name',
         'year',
         'time',
+        'description',
         'image',
         'video',
         'director_id',
@@ -23,10 +24,10 @@ class Movie extends Model
 
     public function actors()
     {
-        $this->belongsToMany(Actor::class, 'movie_actors', 'movie_id', 'actor_id');
+       return $this->belongsToMany(Actor::class, 'movie_actors', 'movie_id', 'actor_id');
     }
     public function categories(){
-        $this->belongsToMany(Category::class,'movie_categories','movie_id','category_id' );
+       return $this->belongsToMany(Category::class,'movie_categories','movie_id','category_id' );
     }
 
 

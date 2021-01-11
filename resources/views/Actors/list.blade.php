@@ -41,7 +41,7 @@
                 @else
                     @foreach($actors as $key => $actor)
                         <tr>
-                            <th scope="row">{{ ++$key }}</th>
+                            <th scope="row">{{ $key +$actors-> firstItem()  }}</th>
                             <td>{{ $actor->name }}</td>
                             <td>{{ $actor->year }}</td>
                             <td>{{ $actor->country }}</td>
@@ -61,4 +61,7 @@
         </div>
 
     </div>
+
+
+    <div style="float: right;">{{ $actors->links( "pagination::bootstrap-4") }}</div>
 @endsection
