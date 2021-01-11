@@ -18,30 +18,23 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <div class="menu-main-menu-container">
                                 <ul id="top-menu" class="navbar-nav ml-auto">
-                                    <li class="menu-item ">
+                                    <li class=" menu-item dropdown" >
                                         <a href="index-2.html">{{__('message.Home')}}</a>
                                     </li>
-{{--                                    <li class="menu-item dropdown">--}}
-{{--                                        <a class="nav-link" href="#" id="navbarDropdown" >Dropdown</a>--}}
-{{--                                        <div class="dropdown-content">--}}
-{{--                                            <a class="dropdown-item" href="#">Action</a>--}}
-{{--                                            <a class="dropdown-item" href="#">Another action</a>--}}
-{{--                                            <a class="dropdown-item" href="#">Something else here</a>--}}
-{{--                                        </div>--}}
-{{--                                    </li>--}}
-                                    <li class="menu-item dropdown">
+
+                                    <li class="menu-item dropdown ">
                                         <a href="show-category.html">{{__('message.Category')}}</a>
-                                        <div class="dropdown-content">
-                                            @foreach($categories as $category)
-                                                <a class="dropdown-item" href="index.php?page=iphone">{{$category->name}}</a>
+                                        <div class="dropdown-content three-column" aria-labelledby="dropdownMenuButton2">
+                                        @foreach($categories as $category)
+                                                <a class="dropdown-item" href="{{route('movie.type',$category->id)}}">{{$category->name}}</a>
                                             @endforeach
                                         </div>
                                     </li>
                                     <li class="menu-item dropdown">
                                         <a href="show-category.html">{{__('message.Country')}}</a>
-                                        <div class="dropdown-content">
+                                        <div class="dropdown-content three-column" aria-labelledby="dropdownMenuButton2">
                                             @foreach($countries as $country)
-                                                <a class="dropdown-item" href="index.php?page=iphone">{{$country->name}}</a>
+                                                <a class="dropdown-item" href="{{route('movie.type',$country->id)}}">{{$country->name}}</a>
                                             @endforeach
                                         </div>
                                     </li>
@@ -142,11 +135,12 @@
                                         <i class="ri-search-line"></i>
                                     </a>
                                     <div class="search-box iq-search-bar d-search">
-                                        <form action="#" class="searchbox">
+                                        <form action="{{route('director.search')}}" method="post" class="searchbox">
+                                            @csrf
                                             <div class="form-group position-relative">
-                                                <input type="text" class="text search-input font-size-12"
-                                                       placeholder="type here to search...">
-                                                <i class="search-link ri-search-line"></i>
+                                                <input type="text" name="search" class="text search-input font-size-12"
+                                                       placeholder="Movie, Director, Actor">
+                                                <i class="search-link ri-search-line" ></i>
                                             </div>
                                         </form>
                                     </div>

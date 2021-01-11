@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Category;
+use App\Models\Country;
 use App\Models\Director;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -103,5 +105,11 @@ class DirectorController extends Controller
         $search = $request->input('search');
         $directors = DB::table('directors')->where('name' ,'like','%' .$search. '%')->get();
         return view('Directors.list', compact('directors'));
+    }
+    public function searchMovie(Request $request){
+
+        $search = $request->input('search');
+        $director = Director::where('name','like',"%$search%")->get();
+        return view('font-end.movie-type',compact('director'));
     }
 }

@@ -28,6 +28,12 @@ Route::middleware('setLocale')->get('/', [MovieController::class, 'indexFontEnd'
 Route::middleware('setLocale')->prefix('user')->group(function () {
     Route::get('/movie-fontEnd/{id}/show', [MovieController::class, 'showFontEnd'])->name('movie-fontEnd.detail');
 
+//    Route::get('/movie/search',[MovieController::class,'searchMovie'])->name('movie.input');
+    Route::post('/movie/search',[MovieController::class,'searchMovieFontend'])->name('movie.search');
+    Route::post('/movie/search/director',[DirectorController::class,'searchMovie'])->name('director.search');
+
+
+    Route::get('/movie-type/{id}/show',[MovieController::class,'showMovie'])->name('movie.type');
     Route::get('/login', [LoginController::class, 'login'])->name('login');
     Route::post('/login', [LoginController::class, 'userLogin'])->name('success.login-user');
     Route::post('change-language', [LangController::class, 'setLocale'])->name('lang.setLocale');

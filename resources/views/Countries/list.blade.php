@@ -33,12 +33,12 @@
                 </tr>
                 </thead>
                 <tbody>
-                @if(count($countrys) == 0)
+                @if(count($countries) == 0)
                     <tr>
                         <td colspan="7" class="text-center">Không có dữ liệu</td>
                     </tr>
                 @else
-                    @foreach($countrys as $key => $country)
+                    @foreach($countries as $key => $country)
                         <tr>
                             <th scope="row">{{ ++$key }}</th>
                             <td>{{ $country->name }}</td>
