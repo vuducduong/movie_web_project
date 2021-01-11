@@ -163,10 +163,7 @@
                                                     <span class="text-white">{{$movie->time}}</span>
                                                 </div>
                                                 <div class="hover-buttons">
-                                          <span class="btn btn-hover">
-                                          <i class="fa fa-play mr-1" aria-hidden="true"><a href="{{route('movie-fontEnd.detail',$movie->id)}}">Xem Phim</a></i>
-
-                                          </span>
+                                              <a  href="{{route('movie-fontEnd.detail',$movie->id)}}" class="btn btn-danger">Xem Phim</a>
                                                 </div>
                                             </div>
                                             <div class="block-social-info">

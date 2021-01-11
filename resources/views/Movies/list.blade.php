@@ -2,7 +2,7 @@
 
 @section('title')
     <div class="iq-search-bar ml-auto">
-        <form action="{{route('movies.complete_search')}}"  method="post">
+        <form  method="post">
             @csrf
             <input name="search" type="text" class="text search-input" placeholder="Search Here...">
             <a class="search-link" href="#"><i class="ri-search-line"></i></a>

@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Facades\Schema;
+use App\Models\Category;
+use App\Models\Country;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -24,6 +26,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Schema::defaultStringLength(191);
+        $countries = Country::all();
+        $categories = Category::all();
+        View::share('countries',$countries);
+        View::share('categories',$categories);
     }
 }

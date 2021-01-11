@@ -167,12 +167,8 @@ class MovieController extends Controller
      */
     public function destroy($id)
     {
-        $movies = Movie::find($id);
-//        $movies->categories()->detach();
-//        $movies->actors()->detach();
-        $movies->categories()->sync([]);
-        $movies->actors()->sync([]);
-        $movies->delete();
+        $movie = Movie::find($id);
+        $movie->delete();
 
         return redirect()->route('movies.list');
     }
@@ -196,7 +192,7 @@ class MovieController extends Controller
 //        $actors = Actor::all();
 //        $movie = Movie::all();
 
-        $movies = DB::table('movies')->where('name' ,'like','%' .$search. '%')->paginate(5);
+        $movies = DB::table('movies')->where('name' ,'like','%' .$search. '%')->paginate(3);
         return view('Movies.list', compact('movies',));
     }
 
@@ -218,5 +214,27 @@ class MovieController extends Controller
         $categories = Category::all();
         $countries = Country::all();
         return view('font-end.movie-detail', compact('movie', 'categories', 'countries'));
+    }
+    public function showMovie($id){
+
+//        $movies = Movie::all()->get();
+        $categos = Category::findorfail($id);
+        $category_id = $categos->id;
+        $movies =Movie::whereHas('categories', function ($q) use ($category_id) {
+            $q->where("categories.id", "=", $category_id);
+        })->paginate(4);
+        return view('font-end.movie-type',compact('movies'));
+    }
+
+    public function searchMovie(){
+        return view('font-end.core.header');
+    }
+    public function searchMovieFontend(Request $request){
+
+
+
+            $search = $request->input('search');
+            $movies = Movie::where('name','like',"%$search%")->get();
+            return view('font-end.movie-type',compact('movies',));
     }
 }
