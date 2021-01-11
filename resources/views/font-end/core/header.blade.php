@@ -23,7 +23,7 @@
                                     </li>
 
                                     <li class="menu-item dropdown ">
-                                        <a href="show-category.html">{{__('message.Category')}}</a>
+                                        <h5>{{__('message.Category')}}</h5>
                                         <div class="dropdown-content three-column" aria-labelledby="dropdownMenuButton2">
                                         @foreach($categories as $category)
                                                 <a class="dropdown-item" href="{{route('movie.type',$category->id)}}">{{$category->name}}</a>
@@ -31,10 +31,10 @@
                                         </div>
                                     </li>
                                     <li class="menu-item dropdown">
-                                        <a href="show-category.html">{{__('message.Country')}}</a>
+                                        <h5>{{__('message.Country')}}</h5>
                                         <div class="dropdown-content three-column" aria-labelledby="dropdownMenuButton2">
                                             @foreach($countries as $country)
-                                                <a class="dropdown-item" href="{{route('movie.type',$country->id)}}">{{$country->name}}</a>
+                                                <a class="dropdown-item" href="{{route('movie.country',$country->id)}}">{{$country->name}}</a>
                                             @endforeach
                                         </div>
                                     </li>
@@ -135,9 +135,9 @@
                                         <i class="ri-search-line"></i>
                                     </a>
                                     <div class="search-box iq-search-bar d-search">
-                                        <form action="{{route('director.search')}}" method="post" class="searchbox">
+                                        <form action="{{route('movie.search')}}" method="post" class="searchbox">
                                             @csrf
-                                            <div class="form-group position-relative">
+                                            <div class="form-group  position-relative">
                                                 <input type="text" name="search" class="text search-input font-size-12"
                                                        placeholder="Movie, Director, Actor">
                                                 <i class="search-link ri-search-line" ></i>
