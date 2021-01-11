@@ -19,7 +19,7 @@
                             <div class="menu-main-menu-container">
                                 <ul id="top-menu" class="navbar-nav ml-auto">
                                     <li class=" menu-item dropdown" >
-                                        <a href="index-2.html">{{__('message.Home')}}</a>
+                                        <a href="{{route('movie-fontEnd.index')}}">{{__('message.Home')}}</a>
                                     </li>
 
                                     <li class="menu-item dropdown ">

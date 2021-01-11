@@ -26,7 +26,7 @@
 
                     <div class="form-group">
                         <label>Mô Tả</label>
-                        <textarea  class="form-control" name="description" cols="30" rows="10" required  value="{{ $movie->description}}"></textarea>
+                        <textarea  class="form-control" name="description" cols="30" rows="10"  required>{{ $movie->description}}</textarea>
 {{--                        <input type="text" class="form-control" name="time"   required>--}}
                     </div>
 
@@ -90,14 +90,22 @@
 
                     <div class="form-group">
                         <label>Ảnh </label>
-                        <input type="file" class="form-control-file" name="image" >
+                        <input type="file" value="{{$movie->image}}" class="form-control-file" name="image" >
+
+                        <img src="{{url('images/' . $movie->image)}}" width="150px" height="150px" class="img-fluid img-thumbnail">
                     </div>
 
 
 
                     <div class="form-group">
                         <label>Video</label>
-                        <input type="file" class="form-control-file" name="video" >
+                        <input type="file" value="{{$movie->video}}" class="form-control-file" name="video" >
+
+{{--                        <video src="{{url('videos/' . $movie->video)}}" width="150px" height="150px" class="img-fluid img-thumbnail">--}}
+                        <video controls width="300px" height="150px">
+                            <source src="{{ url('videos/' . $movie->video) }}"
+                                    type="video/mp4">
+                        </video>
                     </div>
 
 

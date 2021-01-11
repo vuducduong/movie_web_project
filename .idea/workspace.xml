@@ -2,19 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26d11aa2-f9c5-4f8a-8607-c1c83d004c03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/font-end/type-movie/movie-actor.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/font-end/type-movie/movie-country.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/font-end/type-movie/movie-movie.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DirectorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DirectorController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1610358554.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1610359144.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1610359546.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1610360551.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1313.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/videos/1610358554.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/videos/1610359144.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/videos/1610359546.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/videos/1610360551.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1610339772.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/endgame.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/font-end/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/font-end/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Movies/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Movies/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/font-end/core/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/font-end/core/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/font-end/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/font-end/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/font-end/movie-type.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/font-end/type-movie/movie-category.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +241,7 @@
       <workItem from="1610327365881" duration="13528000" />
       <workItem from="1610346976332" duration="703000" />
       <workItem from="1610348206906" duration="8382000" />
-      <workItem from="1610367588897" duration="4191000" />
+      <workItem from="1610367588897" duration="4528000" />
     </task>
     <servers />
   </component>

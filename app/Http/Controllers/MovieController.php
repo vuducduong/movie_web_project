@@ -114,7 +114,10 @@ class MovieController extends Controller
     public function update(Request $request, $id)
     {
         $movie = Movie::findOrFail($id);
+
         if ($request->hasFile('image')) {
+
+//            $imageName = $request->image;
             try {
                 $imageName = time() . '.' . $request->image->getClientOriginalExtension();
                 $request->image->move(public_path('images'), $imageName);
@@ -125,6 +128,7 @@ class MovieController extends Controller
             }
             try {
                 $movie->fill($request->all());
+
                 $movie->image = $imageName;
                 $videoName = time() . '.' . $request->video->getClientOriginalExtension();
                 $request->video->move(public_path('videos'), $videoName);
@@ -136,7 +140,6 @@ class MovieController extends Controller
                 foreach ($request->category as $val) {
                     Category::find($val)->movies()->attach($movie->id);
                 }
-
 
 
             } catch (\Exception $e) {

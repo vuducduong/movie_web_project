@@ -34,10 +34,10 @@
     <!-- Sidebar-->
     <div class="iq-sidebar">
         <div class="iq-sidebar-logo d-flex justify-content-between">
-            <a href="index-2.html" class="header-logo">
+            <a href="{{route('movie-fontEnd.index')}}" class="header-logo">
                 <img src="../assets/images/logo.png" class="img-fluid rounded-normal" alt="">
                 <div class="logo-title">
-                    <span class="text-primary text-uppercase">Streamit</span>
+                    <span class="text-primary text-uppercase" >Trang Chủ </span>
                 </div>
             </a>
             <div class="iq-menu-bt-sidebar">
@@ -58,10 +58,6 @@
                     <li><a href="{{route('actors.list')}}" class="iq-waves-effect"><i class="las la-user-friends"></i><span>Danh Sách Diễn Viên</span></a></li>
                     <li><a href="{{route('category.list')}}" class="iq-waves-effect"><i class="las la-user-friends"></i><span>Danh Sách Thể Loại </span></a></li>
 
-
-                    <li>
-
-                    </li>
                 </ul>
             </nav>
         </div>
