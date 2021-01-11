@@ -2,116 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26d11aa2-f9c5-4f8a-8607-c1c83d004c03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_11_040517_add_colummn_description_to_movies_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610162424.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610162758.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610163205.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610164871.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610164922.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610172857.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610173782.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610173911.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610174015.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610174173.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610174618.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610174705.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610174731.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610177241.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610177648.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610178250.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610179529.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610179539.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610329957.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610334637.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610334715.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610334747.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610336311.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610336358.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610336517.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610336612.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610336666.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610336709.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610336812.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610338430.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610339403.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610339663.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610339772.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610339903.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1610340145.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610098803.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610098885.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610098904.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610098933.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610098996.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610099064.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610099248.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610179257.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610179437.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610179459.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610330152.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610330170.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610330205.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610330251.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/1610335666.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610159981.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610160031.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610160080.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610162424.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610162537.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610162606.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610162669.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610162758.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610163205.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610164871.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610164922.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610168470.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610172857.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610173782.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610173911.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610174015.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610174173.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610174618.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610174705.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610174731.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610177241.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610177648.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610178250.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610179539.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610329957.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610334637.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610334715.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610334747.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610336311.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610336358.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610336517.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610336612.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610336666.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610336709.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610336812.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610338430.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610339403.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610339663.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610339772.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610339903.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videos/1610340145.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/font-end/type-movie/movie-actor.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/font-end/type-movie/movie-country.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/font-end/type-movie/movie-movie.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ActorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ActorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DirectorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DirectorController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Movie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Actors/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Actors/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Categories/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Categories/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Countries/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Countries/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Countries/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Countries/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Directors/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Directors/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Movies/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Movies/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Movies/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Movies/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Movies/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Movies/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/1610339772.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/endgame.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/font-end/core/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/font-end/core/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/font-end/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/font-end/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/font-end/movie-detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/font-end/movie-detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/font-end/movie-type.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/font-end/type-movie/movie-category.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -267,6 +168,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../quangnamhd/CaseStudy-Module-3--App-Movie" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -279,11 +181,11 @@
       <recent name="$PROJECT_DIR$/template" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/font-end/type-movie" />
+      <recent name="$PROJECT_DIR$/resources/views/font-end" />
       <recent name="$PROJECT_DIR$/database/migrations" />
       <recent name="$PROJECT_DIR$/database/migrate" />
       <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/resources/views/font-end/login-sign-up" />
-      <recent name="$PROJECT_DIR$/public/font-end/images/favorite" />
     </key>
   </component>
   <component name="RunManager">
@@ -336,7 +238,9 @@
       <workItem from="1610176007392" duration="10056000" />
       <workItem from="1610248865967" duration="21271000" />
       <workItem from="1610327365881" duration="13528000" />
-      <workItem from="1610346976332" duration="307000" />
+      <workItem from="1610346976332" duration="703000" />
+      <workItem from="1610348206906" duration="8382000" />
+      <workItem from="1610367588897" duration="4191000" />
     </task>
     <servers />
   </component>
@@ -347,7 +251,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/font-end/movie-type.blade.php</url>
+          <url>file://$PROJECT_DIR$/resources/views/font-end/type-movie/movie-category.blade.php</url>
           <line>10</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>

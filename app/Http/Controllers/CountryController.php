@@ -112,5 +112,13 @@ class CountryController extends Controller
         $countries = Country::all();
         return view('font-end.core.header', compact('countries'));
     }
+    public function showMovie($id){
+        $country = Country::findorfail($id);
+        $country_id = $country->id;
+        $movies =Movie::whereHas('country', function ($q) use ($country_id) {
+            $q->where("countries.id", "=", $country_id);
+        })->paginate(4);
+        return view('font-end.type-movie.movie-country',compact('movies'));
+    }
 }
 

@@ -217,24 +217,31 @@ class MovieController extends Controller
     }
     public function showMovie($id){
 
-//        $movies = Movie::all()->get();
         $categos = Category::findorfail($id);
         $category_id = $categos->id;
         $movies =Movie::whereHas('categories', function ($q) use ($category_id) {
             $q->where("categories.id", "=", $category_id);
         })->paginate(4);
-        return view('font-end.movie-type',compact('movies'));
+        return view('font-end.type-movie.movie-category',compact('movies'));
     }
 
-    public function searchMovie(){
-        return view('font-end.core.header');
-    }
     public function searchMovieFontend(Request $request){
-
-
 
             $search = $request->input('search');
             $movies = Movie::where('name','like',"%$search%")->get();
-            return view('font-end.movie-type',compact('movies',));
+            return view('font-end.type-movie.movie-category',compact('movies',));
+    }
+
+    public function searchMovieForm(Request $request){
+        $search = $request->search;
+
+        $data = DB::table('movies')
+            ->join('directors', 'movies.director_id', '=', 'directors.id')
+            ->select('movies.id as MoviesId', 'movies.name as MoviesName', 'movies.year', 'movies.time','movies.image as MovieImage','movies.video' ,'movies.description', 'directors.name as DirectorsName')
+            ->where('movies.name', 'LIKE', "%$search%")
+            ->orWhere('.directors.name', 'LIKE', "%$search%")
+            ->get();
+        return view('font-end.type-movie.movie-movie', compact(['search', 'data']));
+
     }
 }
