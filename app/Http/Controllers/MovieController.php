@@ -82,23 +82,13 @@ class MovieController extends Controller
     }
 
 
-    /**
-     * Display the specified resource.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
         $movie = Movie::findOrFail($id);
@@ -146,13 +136,7 @@ class MovieController extends Controller
     }
 
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+     public function destroy($id)
     {
         $movie = Movie::find($id);
         $movie->delete();
