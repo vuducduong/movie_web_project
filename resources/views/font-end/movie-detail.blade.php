@@ -15,20 +15,21 @@
                         <h1 class="trending-text big-title text-uppercase mt-0">{{$movie->name}}</h1>
                         <ul class="p-0 list-inline d-flex align-items-center movie-content">
 
-                            <li class="text-white">Thể Loại : {{$movie->categories()->get()->first()->name}}</li>
+                            <li class="text-white">Thể Loại : @php
+$actor = $movie->categories()->get();
+foreach($actor as $value){
+    echo $value->name.',';}@endphp</li>
 
-{{--                            <li class="text-white">{{$movie->actor->name}}</li>--}}
 
 
                             <li class="text-white">Quốc Gia : {{$movie->country->name}}</li>
                             <li class="text-white">Đạo Diễn : {{ $movie->director->name }}</li>
 
-                            <li class="text-white">Diễn Viên :@php $arr_actor = [];
-$actor = $movie->actors()->get()->first()->name;
+                            <li class="text-white">Diễn Viên :@php
+$actor = $movie->actors()->get();
 foreach($actor as $value){
-    echo $value.',';
+    echo $value->name.',';
 }
-
                              @endphp</li>
 
                         </ul>
